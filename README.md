@@ -15,9 +15,7 @@ _Jedvaita: The Way the World Unfolds_
 ##
 ###
 
-<!-- 
-[Code](https://github.com/RobertArtigas/DCT2CLASS_Docs)
-[Wiki](https://github.com/RobertArtigas/DCT2CLASS_Docs/wiki) 
--->
+[Code]https://github.com/RobertArtigas/real)
+[Wiki](https://github.com/RobertArtigas/real/wiki) 
 [Main](https://github.com/RobertArtigas) 
 [Repositories](https://github.com/RobertArtigas?tab=repositories)
