@@ -2,15 +2,6 @@
 
 Clarion based framework
 
-##
-###
-
-<!-- 
-[Code](https://github.com/RobertArtigas/DCT2CLASS_Docs)
-[Wiki](https://github.com/RobertArtigas/DCT2CLASS_Docs/wiki) 
--->
-[Main](https://github.com/RobertArtigas) 
-[Repositories](https://github.com/RobertArtigas?tab=repositories)
 
 ##
 ###
@@ -20,3 +11,13 @@ That’s what it means to say thoughts are things. That’s the integration that
 There are no particles or atoms or building blocks, there is no time, space, energy or matter, there is only intelligence. 
 All appearance -- clouds, feelings, bananas, beliefs, self, toothpaste -- is intelligence and nothing else. <BR/>
 _Jedvaita: The Way the World Unfolds_
+
+##
+###
+
+<!-- 
+[Code](https://github.com/RobertArtigas/DCT2CLASS_Docs)
+[Wiki](https://github.com/RobertArtigas/DCT2CLASS_Docs/wiki) 
+-->
+[Main](https://github.com/RobertArtigas) 
+[Repositories](https://github.com/RobertArtigas?tab=repositories)
