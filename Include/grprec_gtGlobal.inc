@@ -1,7 +1,7 @@
 !BOF
 !
 ! File:         C:\_GIT_\RobertArtigas\real\Include\grprec_gtGlobal.inc
-! Date-Time:    2022/04/27 - 12:50:19PM
+! Date-Time:    2022/04/28 - 08:42:07AM
 ! Purpose:      Generated File Records as Groups
 ! Author:       GenerateGroups Template
 ! Narative:     This template is used to pass records structures
