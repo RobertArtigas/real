@@ -1,0 +1,8 @@
+[MODULE]
+NAME 'Main_Generate.clw'
+[COMMON]
+FROM ABC GENERATED
+[PROCEDURE]
+NAME Main
+[COMMON]
+[END]
