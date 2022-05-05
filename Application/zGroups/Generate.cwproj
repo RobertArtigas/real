@@ -28,6 +28,9 @@
     <Compile Include="Generate.clw">
       <Generated>true</Generated>
     </Compile>
+    <Compile Include="Generate001.clw">
+      <Generated>true</Generated>
+    </Compile>
     <Compile Include="GENERATE_BC.CLW">
       <Generated>true</Generated>
     </Compile>
