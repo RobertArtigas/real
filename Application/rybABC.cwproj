@@ -28,9 +28,6 @@
     <Compile Include="rybABC.clw">
       <Generated>true</Generated>
     </Compile>
-    <Compile Include="rybABC001.clw">
-      <Generated>true</Generated>
-    </Compile>
     <Compile Include="RYBABC_BC.CLW">
       <Generated>true</Generated>
     </Compile>
