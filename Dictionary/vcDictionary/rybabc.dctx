@@ -1,0 +1,1051 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dictionary Name="rybabc" Version="1" StructureChecked="1" DctxFormat="4">
+	<DictionaryVersion Version="1" Description="Initial version"/>
+	<Table Guid="{f27271b8-176e-42c7-ae19-e0d0c65f79e5}" Name="gtNameAttr" Description="Name Attributes" Prefix="gtNA01" Driver="TOPSPEED" Thread="true" Bindable="true">
+		<Audit CreateUser="Administrator" CreateDate=" 3 APR 2022" CreateTime=" 9:50:49AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:21:52PM" ModifiedVersionNumber="1"/>
+		<Field Guid="{5e44d8b7-5237-4613-b667-2399308d0085}" Name="FieldNumber" Description="Field number." DataType="SHORT" Size="2" ScreenPicture="@n4B" ScreenPrompt="Field Number:" ReportHeading="Number" Justification="RIGHT" Offset="1" InitialValue="0" Message="Field number." Tooltip="Field number." ReportControl=" STRING(@n4B),USE(gtNA01:FieldNumber),RIGHT(1)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;Field Number:&apos;),USE(?gtNA01:FieldNumber:Prompt)"/>
+				<Line Text=" ENTRY(@n4B),USE(gtNA01:FieldNumber),RIGHT(1),MSG(&apos;Field number.&apos;),TIP(&apos;Field number.&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate=" 9 APR 2022" CreateTime=" 7:25:12PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="19 APR 2022" ModifiedTime=" 8:40:56PM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+		</Field>
+		<Field Guid="{deb3dd1f-cc4e-4737-a1ad-e8215188020d}" Name="FieldSalt" Description="Is a SALT encryption?" DataType="BYTE" Size="1" ScreenPicture="@n1B" ScreenPrompt="Field Salt:" ReportHeading="Salt" Justification="RIGHT" InitialValue="0" Message="Is a SALT encryption?" Tooltip="Is a SALT encryption?" WindowControl=" CHECK(&apos;Field Salt:&apos;),USE(gtNA01:FieldSalt),RIGHT,MSG(&apos;Is a SALT encryption?&apos;),VALUE(&apos;1&apos;,&apos;0&apos;),TIP(&apos;Is a SALT encryption?&apos;)" ReportControl=" CHECK(&apos;Field Salt:&apos;),USE(gtNA01:FieldSalt),RIGHT,VALUE(&apos;1&apos;,&apos;0&apos;)">
+			<Audit CreateUser="Administrator" CreateDate=" 3 APR 2022" CreateTime="10:03:05AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 9 APR 2022" ModifiedTime=" 7:28:27PM" ModifiedVersionNumber="1"/>
+			<Validity Check="BOOLEAN" TrueValue="1" FalseValue="0"/>
+		</Field>
+		<Field Guid="{35096127-5b50-4a48-8b81-c95cedba725f}" Name="FieldFrom" Description="Field starting location." DataType="LONG" Size="4" ScreenPicture="@n04" ScreenPrompt="Field From:" ReportHeading="From" Justification="LEFT" InitialValue="0" Message="Field starting location." Tooltip="Field starting location." ReportControl=" STRING(@n04),USE(gtNA01:FieldFrom),LEFT">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;Field From:&apos;),USE(?gtNA01:FieldFrom:Prompt)"/>
+				<Line Text=" ENTRY(@n04),USE(gtNA01:FieldFrom),LEFT,MSG(&apos;Field starting location.&apos;),TIP(&apos;Field starting location.&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate=" 3 APR 2022" CreateTime="10:05:56AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 9 APR 2022" ModifiedTime=" 7:27:29PM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+		</Field>
+		<Field Guid="{4c289924-4db0-453a-8f71-559d78332cd4}" Name="FieldTo" Description="Field ending location." DataType="LONG" Size="4" ScreenPicture="@n04" ScreenPrompt="Field To:" ReportHeading="To" Justification="LEFT" InitialValue="0" Message="Field ending location." Tooltip="Field ending location." ReportControl=" STRING(@n04),USE(gtNA01:FieldTo),LEFT">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;Field To:&apos;),USE(?gtNA01:FieldTo:Prompt)"/>
+				<Line Text=" ENTRY(@n04),USE(gtNA01:FieldTo),LEFT,MSG(&apos;Field ending location.&apos;),TIP(&apos;Field ending location.&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate=" 3 APR 2022" CreateTime="10:07:41AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 9 APR 2022" ModifiedTime=" 7:27:40PM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+		</Field>
+		<Field Guid="{939aafa1-b498-4d98-8d89-b4af84514d8b}" Name="FieldName" Description="Field name." DataType="CSTRING" Size="49" ScreenPicture="@s48" ScreenPrompt="Field Name:" ReportHeading="Name" InitialValue="&apos;&apos;" Message="Field name." Tooltip="Field name." ReportControl=" STRING(@s48),USE(gtNA01:FieldName)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;Field Name:&apos;),USE(?gtNA01:FieldName:Prompt)"/>
+				<Line Text=" ENTRY(@s48),USE(gtNA01:FieldName),MSG(&apos;Field name.&apos;),TIP(&apos;Field name.&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate=" 3 APR 2022" CreateTime="10:11:33AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 3 APR 2022" ModifiedTime="10:11:33AM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+		</Field>
+		<Field Guid="{42acfd0f-4117-493c-9c25-5b658c26b384}" Name="FieldWhom" Description="Field whom it is." DataType="CSTRING" Size="49" ScreenPicture="@s48" ScreenPrompt="Field Whom:" ReportHeading="Whom" InitialValue="&apos;&apos;" Message="Field whom it is." Tooltip="Field whom it is." ReportControl=" STRING(@s48),USE(gtNA01:FieldWhom)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;Field Whom:&apos;),USE(?gtNA01:FieldWhom:Prompt)"/>
+				<Line Text=" ENTRY(@s48),USE(gtNA01:FieldWhom),MSG(&apos;Field whom it is.&apos;),TIP(&apos;Field whom it is.&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate=" 3 APR 2022" CreateTime="10:13:22AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 3 APR 2022" ModifiedTime="10:13:22AM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+		</Field>
+		<Field Guid="{6b69aafb-2069-4abf-af1d-e922517da8b5}" Name="FieldType" Description="Field type clarion." DataType="CSTRING" Size="49" ScreenPicture="@s48" ScreenPrompt="Field Type:" ReportHeading="Type" InitialValue="&apos;&apos;" Message="Field type clarion." Tooltip="Field type clarion." ReportControl=" STRING(@s48),USE(gtNA01:FieldType)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;Field Type:&apos;),USE(?gtNA01:FieldType:Prompt)"/>
+				<Line Text=" ENTRY(@s48),USE(gtNA01:FieldType),MSG(&apos;Field type clarion.&apos;),TIP(&apos;Field type clarion.&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate=" 3 APR 2022" CreateTime="10:15:52AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 3 APR 2022" ModifiedTime="10:15:52AM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+		</Field>
+		<Field Guid="{78e83cc7-79f9-41cc-b333-a48424954c96}" Name="FieldFormat" Description="Field format clarion." DataType="CSTRING" Size="49" ScreenPicture="@s48" ScreenPrompt="Field Format:" ReportHeading="Format" InitialValue="&apos;&apos;" Message="Field format clarion." Tooltip="Field format clarion." ReportControl=" STRING(@s48),USE(gtNA01:FieldFormat)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;Field Format:&apos;),USE(?gtNA01:FieldFormat:Prompt)"/>
+				<Line Text=" ENTRY(@s48),USE(gtNA01:FieldFormat),MSG(&apos;Field format clarion.&apos;),TIP(&apos;Field format clarion.&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate=" 3 APR 2022" CreateTime="10:19:30AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 3 APR 2022" ModifiedTime="10:19:30AM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+		</Field>
+		<Field Guid="{5a9f0f09-369b-4909-97d7-0b665c1d2ab8}" Name="FieldRange" Description="Field range location." DataType="CSTRING" Size="49" ScreenPicture="@s48" ScreenPrompt="Field Range:" ReportHeading="Range" InitialValue="&apos;&apos;" Message="Field range location." Tooltip="Field range location." ReportControl=" STRING(@s48),USE(gtNA01:FieldRange)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;Field Range:&apos;),USE(?gtNA01:FieldRange:Prompt)"/>
+				<Line Text=" ENTRY(@s48),USE(gtNA01:FieldRange),MSG(&apos;Field range location.&apos;),TIP(&apos;Field range location.&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate=" 3 APR 2022" CreateTime="10:21:28AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 3 APR 2022" ModifiedTime="10:21:28AM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+		</Field>
+		<Field Guid="{0ef8918c-1b9b-4cf1-a2c0-6aff1b0f8723}" Name="FieldPrompt" Description="Field prompt literal." DataType="CSTRING" Size="129" ScreenPicture="@s128" ScreenPrompt="Field Prompt:" ReportHeading="Prompt" InitialValue="&apos;&apos;" Message="Field prompt literal." Tooltip="Field prompt literal." ReportControl=" STRING(@s128),USE(gtNA01:FieldPrompt)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;Field Prompt:&apos;),USE(?gtNA01:FieldPrompt:Prompt)"/>
+				<Line Text=" ENTRY(@s128),USE(gtNA01:FieldPrompt),MSG(&apos;Field prompt literal.&apos;),TIP(&apos;Field prompt literal.&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate=" 3 APR 2022" CreateTime="10:26:50AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 3 APR 2022" ModifiedTime="10:26:50AM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+		</Field>
+		<Field Guid="{8759c4ae-deac-4858-bb87-454e87a2c888}" Name="FieldColumn" Description="Field column literal." DataType="CSTRING" Size="129" ScreenPicture="@s128" ScreenPrompt="Field Column:" ReportHeading="Column" InitialValue="&apos;&apos;" Message="Field column literal." Tooltip="Field column literal." ReportControl=" STRING(@s128),USE(gtNA01:FieldColumn)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;Field Column:&apos;),USE(?gtNA01:FieldColumn:Prompt)"/>
+				<Line Text=" ENTRY(@s128),USE(gtNA01:FieldColumn),MSG(&apos;Field column literal.&apos;),TIP(&apos;Field column literal.&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate=" 3 APR 2022" CreateTime="10:27:44AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 3 APR 2022" ModifiedTime="10:27:44AM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+		</Field>
+		<Field Guid="{138f1738-3b3b-4359-b1eb-15bdfd9cf28f}" Name="FieldTypeSQL" Description="Field type SQL." DataType="CSTRING" Size="129" ScreenPicture="@s128" ScreenPrompt="SQL Type:" ReportHeading="SQLType" InitialValue="&apos;&apos;" Message="Field type SQL." Tooltip="Field type SQL." ReportControl=" STRING(@s128),USE(gtNA01:FieldTypeSQL)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;SQL Type:&apos;),USE(?gtNA01:FieldTypeSQL:Prompt)"/>
+				<Line Text=" ENTRY(@s128),USE(gtNA01:FieldTypeSQL),MSG(&apos;Field type SQL.&apos;),TIP(&apos;Field type SQL.&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate=" 3 APR 2022" CreateTime="10:29:45AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="10 APR 2022" ModifiedTime=" 4:46:56PM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+		</Field>
+		<Field Guid="{7891615b-4acf-4ccc-b0af-622fcdba9c77}" Name="FieldFormatSQL" Description="Field format SQL." DataType="CSTRING" Size="129" ScreenPicture="@s128" ScreenPrompt="SQL Format:" ReportHeading="SQLFormat" InitialValue="&apos;&apos;" Message="Field format SQL." Tooltip="Field format SQL." ReportControl=" STRING(@s128),USE(gtNA01:FieldFormatSQL)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;SQL Format:&apos;),USE(?gtNA01:FieldFormatSQL:Prompt)"/>
+				<Line Text=" ENTRY(@s128),USE(gtNA01:FieldFormatSQL),MSG(&apos;Field format SQL.&apos;),TIP(&apos;Field format SQL.&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate=" 3 APR 2022" CreateTime="10:30:54AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="10 APR 2022" ModifiedTime=" 4:47:34PM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+		</Field>
+		<Field Guid="{a57e66d6-a6cb-4e02-9f06-44b3b30052c7}" Name="FieldTemp" Description="Field attributes temporary." DataType="CSTRING" Size="241" ScreenPicture="@s240" ScreenPrompt="Field Temp:" ReportHeading="Temp" InitialValue="&apos;&apos;" Message="Field attributes temporary." Tooltip="Field attributes temporary." ReportControl=" STRING(@s240),USE(gtNA01:FieldTemp)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;Field Temp:&apos;),USE(?gtNA01:FieldTemp:Prompt)"/>
+				<Line Text=" ENTRY(@s240),USE(gtNA01:FieldTemp),MSG(&apos;Field attributes temporary.&apos;),TIP(&apos;Field attributes temporary.&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate=" 3 APR 2022" CreateTime="10:33:13AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="10 APR 2022" ModifiedTime=" 2:50:26PM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+		</Field>
+	</Table>
+	<Table Guid="{508020f8-7dca-40b8-afac-f7832134880f}" Name="gtBase" Description="Base definitions" Prefix="gtBASE" Driver="TOPSPEED" Thread="true" Bindable="true">
+		<Audit CreateUser="Administrator" CreateDate=" 9 OCT 2020" CreateTime=" 5:21:27PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="28 APR 2022" ModifiedTime=" 8:41:16AM" ModifiedVersionNumber="1"/>
+		<Option Property="Version" PropertyType="3" PropertyValue="1"/>
+		<Field Guid="{7026b083-4e11-4c0d-b400-683b74070ca8}" Name="timestamp" Description="Local time stamp." DataType="REAL" Size="8" ScreenPicture="@n15.0B" ScreenPrompt="TS:" ReportHeading="TS" Justification="LEFT" ExternalName="ts" InitialValue="0" FormTab="&apos;Internal&apos;" Message="Local time stamp." Tooltip="Local time stamp." ReportControl=" STRING(@n15.0B),USE(gtBASE:timestamp),LEFT,FONT(&apos;Consolas&apos;,10)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;TS:&apos;),USE(?gtBASE:timestamp:Prompt),TRN,FONT(&apos;Segoe UI&apos;,10)"/>
+				<Line Text=" ENTRY(@n15.0B),USE(gtBASE:timestamp),LEFT,FONT(&apos;Segoe UI&apos;,10),MSG(&apos;Local time stamp.&apos;),TIP(&apos;Local time stamp.&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate=" 9 OCT 2020" CreateTime=" 5:27:41PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 3 APR 2022" ModifiedTime=" 2:26:24PM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+			<Option Property="TimeStamp" PropertyType="3" PropertyValue="1"/>
+			<Option Property="RASQL" PropertyType="1" PropertyValue=","/>
+		</Field>
+		<Field Guid="{12279332-f70c-45c7-a3f6-d1c5e2655aa6}" Name="servertimestamp" Description="Server time stamp." DataType="REAL" Size="8" ScreenPicture="@n15.0B" ScreenPrompt="STS:" ReportHeading="STS" Justification="LEFT" ExternalName="sts" InitialValue="0" FormTab="&apos;Internal&apos;" Message="Server time stamp." Tooltip="Server time stamp." ReportControl=" STRING(@n15.0B),USE(gtBASE:servertimestamp),LEFT,FONT(&apos;Consolas&apos;,10)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;STS:&apos;),USE(?gtBASE:servertimestamp:Prompt),TRN,FONT(&apos;Segoe UI&apos;,10)"/>
+				<Line Text=" ENTRY(@n15.0B),USE(gtBASE:servertimestamp),LEFT,FONT(&apos;Segoe UI&apos;,10),MSG(&apos;Server time stamp.&apos;),TIP(&apos;Server time stamp.&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate=" 9 OCT 2020" CreateTime=" 5:27:41PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 3 APR 2022" ModifiedTime=" 2:26:24PM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+			<Option Property="ServerTimeStamp" PropertyType="3" PropertyValue="1"/>
+			<Option Property="RASQL" PropertyType="1" PropertyValue=","/>
+		</Field>
+		<Field Guid="{e8e70e46-c8d3-4d45-ab8e-de6157c15bc2}" Name="deletedtimestamp" Description="Deleted time stamp." DataType="REAL" Size="8" ScreenPicture="@n15.0B" ScreenPrompt="DTS:" ReportHeading="DTS" Justification="LEFT" ExternalName="dts" InitialValue="0" FormTab="&apos;Internal&apos;" Message="Deleted time stamp." Tooltip="Deleted time stamp." ReportControl=" STRING(@n15.0B),USE(gtBASE:deletedtimestamp),LEFT,FONT(&apos;Consolas&apos;,10)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;DTS:&apos;),USE(?gtBASE:deletedtimestamp:Prompt),TRN,FONT(&apos;Segoe UI&apos;,10)"/>
+				<Line Text=" ENTRY(@n15.0B),USE(gtBASE:deletedtimestamp),LEFT,FONT(&apos;Segoe UI&apos;,10),MSG(&apos;Deleted time stamp.&apos;),TIP(&apos;Deleted time stamp.&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate=" 9 OCT 2020" CreateTime=" 5:27:41PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 3 APR 2022" ModifiedTime=" 2:26:24PM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+			<Option Property="DeletedTimeStamp" PropertyType="3" PropertyValue="1"/>
+			<Option Property="RASQL" PropertyType="1" PropertyValue=","/>
+		</Field>
+		<Field Guid="{bbe83a67-21ac-4de0-a5a1-13d114f0dc4a}" Name="encryptionversion" Description="Encryption version." DataType="LONG" Size="4" ScreenPicture="@n-14" ScreenPrompt="Encryption Version:" ReportHeading="EV" Justification="RIGHT" ExternalName="encryptionversion" InitialValue="0" NoPopulate="true" FormTab="&apos;Internal&apos;" Message="Encryption version." Tooltip="Encryption version." ReportControl=" STRING(@n-14),USE(gtBASE:encryptionversion),RIGHT">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;Encryption Version:&apos;),USE(?gtBASE:encryptionversion:Prompt)"/>
+				<Line Text=" ENTRY(@n-14),USE(gtBASE:encryptionversion),RIGHT,MSG(&apos;Encryption version.&apos;),TIP(&apos;Encryption version.&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate=" 9 OCT 2020" CreateTime=" 5:27:41PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 3 APR 2022" ModifiedTime=" 2:26:24PM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+			<Comment Text="Added Encryption Version for Cryptonite.">
+				<Audit CreateUser="Administrator" CreateDate=" 3 APR 2022" CreateTime=" 2:24:42PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 3 APR 2022" ModifiedTime=" 2:24:42PM" ModifiedVersionNumber="1"/>
+			</Comment>
+		</Field>
+		<Field Guid="{8d0c80ce-4067-42fb-b91b-02392ab0041d}" Name="date_update" Description="Date update." DataType="DATE" Size="4" ScreenPicture="@D010-B" ScreenPrompt="Date update:" ReportHeading="DateUp" Justification="LEFT" InitialValue="ryb_ServerDate()" FormTab="&apos;Internal&apos;" Message="Date update." Tooltip="Date update." ReportControl=" STRING(@D010-B),USE(gtBASE:date_update),TRN,LEFT,FONT(&apos;Consolas&apos;,10)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;Date update:&apos;),USE(?gtBASE:date_update:Prompt),TRN,FONT(&apos;Segoe UI&apos;,10)"/>
+				<Line Text=" ENTRY(@D010-B),USE(gtBASE:date_update),TRN,LEFT,FONT(&apos;Segoe UI&apos;,10),MSG(&apos;Date update.&apos;),TIP(&apos;Date update.&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate=" 9 OCT 2020" CreateTime=" 5:27:42PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 3 APR 2022" ModifiedTime=" 2:26:24PM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+			<Option Property="RASQL" PropertyType="1" PropertyValue=",,[DATE]"/>
+		</Field>
+		<Field Guid="{fd801794-1e03-4a3c-ba11-9632cd9d1512}" Name="time_update" Description="Time update." DataType="TIME" Size="4" ScreenPicture="@T04B" ScreenPrompt="Time update:" ReportHeading="TimeUp" Justification="LEFT" InitialValue="ryb_ServerTime()" FormTab="&apos;Internal&apos;" Message="Time update." Tooltip="Time update." ReportControl=" STRING(@T04B),USE(gtBASE:time_update),TRN,LEFT,FONT(&apos;Consolas&apos;,10)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;Time update:&apos;),USE(?gtBASE:time_update:Prompt),TRN,FONT(&apos;Segoe UI&apos;,10)"/>
+				<Line Text=" ENTRY(@T04B),USE(gtBASE:time_update),TRN,LEFT,FONT(&apos;Segoe UI&apos;,10),MSG(&apos;Time update.&apos;),TIP(&apos;Time update.&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate=" 9 OCT 2020" CreateTime=" 5:27:42PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 3 APR 2022" ModifiedTime=" 2:26:24PM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+			<Option Property="RASQL" PropertyType="1" PropertyValue=",,[TIME]"/>
+		</Field>
+		<Field Guid="{7d08107e-6612-4245-aa47-144bbd4605fe}" Name="user_update" Description="User update." DataType="STRING" Size="20" ScreenPicture="@s20" ScreenPrompt="User Update:" ReportHeading="UserUp" Justification="LEFT" InitialValue="ryb_UserName()" FormTab="&apos;Internal&apos;" Message="User update." Tooltip="User update." ReportControl=" STRING(@s20),USE(gtBASE:user_update),LEFT">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;User Update:&apos;),USE(?gtBASE:user_update:Prompt),TRN"/>
+				<Line Text=" ENTRY(@s20),USE(gtBASE:user_update),LEFT,MSG(&apos;User update.&apos;),TIP(&apos;User update.&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate=" 9 OCT 2020" CreateTime=" 5:27:42PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 3 APR 2022" ModifiedTime=" 2:26:24PM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+			<Option Property="RASQL" PropertyType="1" PropertyValue=",,[USER]"/>
+		</Field>
+		<Field Guid="{b1f1b482-a1c8-4aab-83be-52c5c7ef9e8f}" Ident="3576" Name="active_flag" Description="Active flag." DataType="STRING" Size="1" ScreenPicture="@s1" ScreenPrompt="Active flag:" ReportHeading="A" Justification="CENTER" InitialValue="&apos;A&apos;" FormTab="&apos;Data&apos;" Message="Active flag." Tooltip="Active flag." ReportControl=" STRING(@s1),USE(gtBASE:active_flag),TRN,CENTER,FONT(&apos;Consolas&apos;,10)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;Active flag:&apos;),USE(?gtBASE:active_flag:Prompt)"/>
+				<Line Text=" COMBO(@s1),USE(gtBASE:active_flag),CENTER,MSG(&apos;Active flag.&apos;),TIP(&apos;Active flag.&apos;),FROM(&apos;Active|#A|Inactive|#I|Deleted|#D|Purged|#P&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate=" 9 OCT 2020" CreateTime=" 5:27:43PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 3 APR 2022" ModifiedTime=" 2:26:24PM" ModifiedVersionNumber="1"/>
+			<Validity Check="INLIST" Choices="Active|Inactive|Deleted|Purged" Values="A|I|D|P"/>
+		</Field>
+		<Field Guid="{57787491-e967-4483-a458-ee88f4e22115}" Ident="1986" Name="guid" Description="Primary identifier." DataType="STRING" Size="16" ScreenPicture="@s16" ScreenPrompt="GUID:" ReportHeading="GUID" Justification="LEFT" ReadOnly="true" ExternalName="guid" InitialValue="ryb_MakeGUID()" FormTab="&apos;Internal&apos;" Message="Primary identifier." Tooltip="Primary identifier." ReportControl=" STRING(@s16),USE(gtBASE:guid),LEFT,FONT(&apos;Consolas&apos;,10)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;GUID:&apos;),USE(?gtBASE:guid:Prompt),TRN,FONT(&apos;Segoe UI&apos;,10)"/>
+				<Line Text=" ENTRY(@s16),USE(gtBASE:guid),LEFT,FONT(&apos;Segoe UI&apos;,10),MSG(&apos;Primary identifier.&apos;),TIP(&apos;Primary identifier.&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate=" 9 OCT 2020" CreateTime=" 5:27:42PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 3 APR 2022" ModifiedTime=" 2:43:03PM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+			<Comment Text="User id.">
+				<Audit CreateUser="Administrator" CreateDate=" 3 APR 2022" CreateTime=" 2:24:42PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 3 APR 2022" ModifiedTime=" 2:24:42PM" ModifiedVersionNumber="1"/>
+			</Comment>
+			<Option Property="GUID" PropertyType="3" PropertyValue="1"/>
+			<Option Property="RASQL" PropertyType="1" PropertyValue=",,[GUIDPKEY]"/>
+		</Field>
+		<Key Guid="{0a7e7cfb-09d7-421d-a8ce-813a80a41659}" Order="1" Name="timestampkey" ExternalName="key0_c102_ts" Description="Time stamp key." KeyType="KEY">
+			<Audit CreateUser="Administrator" CreateDate=" 3 APR 2022" CreateTime=" 2:24:42PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 3 APR 2022" ModifiedTime=" 2:24:42PM" ModifiedVersionNumber="1"/>
+			<Component Guid="{83d46e8b-f166-4c75-ab84-330e2f6ba0d4}" FieldId="{7026b083-4e11-4c0d-b400-683b74070ca8}" Order="1" Ascend="true">
+				<Audit CreateUser="Administrator" CreateDate=" 3 APR 2022" CreateTime=" 2:24:42PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 3 APR 2022" ModifiedTime=" 2:24:42PM" ModifiedVersionNumber="1"/>
+			</Component>
+		</Key>
+		<Key Guid="{389e811a-e5e3-4ae8-845b-4ed5a7d4a0a0}" Order="2" Name="servertimestampkey" ExternalName="key0_c102_sts" Description="Server time stamp key." KeyType="KEY">
+			<Audit CreateUser="Administrator" CreateDate=" 3 APR 2022" CreateTime=" 2:24:42PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 3 APR 2022" ModifiedTime=" 2:24:42PM" ModifiedVersionNumber="1"/>
+			<Component Guid="{81c8bdca-d9c7-43fd-9776-2317d190d6d0}" FieldId="{12279332-f70c-45c7-a3f6-d1c5e2655aa6}" Order="1" Ascend="true">
+				<Audit CreateUser="Administrator" CreateDate=" 3 APR 2022" CreateTime=" 2:24:42PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 3 APR 2022" ModifiedTime=" 2:24:42PM" ModifiedVersionNumber="1"/>
+			</Component>
+		</Key>
+		<Key Guid="{97064dc0-715c-4697-b576-0d17852df353}" Order="3" Name="deletedtimestampkey" ExternalName="key0_c102_dts" Description="Deleted time stamp key." KeyType="KEY">
+			<Audit CreateUser="Administrator" CreateDate=" 3 APR 2022" CreateTime=" 2:24:42PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 3 APR 2022" ModifiedTime=" 2:24:42PM" ModifiedVersionNumber="1"/>
+			<Component Guid="{1b2f378c-5758-442d-8211-d74de6ff52ea}" FieldId="{e8e70e46-c8d3-4d45-ab8e-de6157c15bc2}" Order="1" Ascend="true">
+				<Audit CreateUser="Administrator" CreateDate=" 3 APR 2022" CreateTime=" 2:24:42PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 3 APR 2022" ModifiedTime=" 2:24:42PM" ModifiedVersionNumber="1"/>
+			</Component>
+		</Key>
+		<Key Guid="{9c8caf87-5f43-4048-9c5a-fba0248d1f3b}" Order="4" Name="key0_base_pkey" ExternalName="key0_base_pkey" Description="Primary identifier key." KeyType="KEY" Unique="true" Primary="true">
+			<Audit CreateUser="Administrator" CreateDate=" 9 OCT 2020" CreateTime=" 6:01:01PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 3 APR 2022" ModifiedTime=" 2:33:09PM" ModifiedVersionNumber="1"/>
+			<Component Guid="{3dbc3ab5-3694-4eb2-aafc-9b9f667916ac}" FieldId="{57787491-e967-4483-a458-ee88f4e22115}" Order="1" Ascend="true">
+				<Audit CreateUser="Administrator" CreateDate=" 3 APR 2022" CreateTime=" 2:24:42PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 3 APR 2022" ModifiedTime=" 2:24:42PM" ModifiedVersionNumber="1"/>
+			</Component>
+		</Key>
+		<Key Guid="{f3c3024f-74ee-410d-9689-cbd3dfc3a37a}" Order="5" Name="key1_base_ukey" ExternalName="key1_base_ukey" Description="Code, guid key." KeyType="KEY" Unique="true">
+			<Audit CreateUser="Administrator" CreateDate=" 3 APR 2022" CreateTime=" 2:24:42PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="28 APR 2022" ModifiedTime=" 8:39:52AM" ModifiedVersionNumber="1"/>
+			<Component Guid="{e17fde4b-d4ff-456c-9c47-b597e57566a4}" FieldId="{b1f1b482-a1c8-4aab-83be-52c5c7ef9e8f}" Order="1" Ascend="true">
+				<Audit CreateUser="Administrator" CreateDate=" 3 APR 2022" CreateTime=" 2:24:42PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 3 APR 2022" ModifiedTime=" 2:24:42PM" ModifiedVersionNumber="1"/>
+			</Component>
+			<Component Guid="{16f68e55-e9a5-4c82-ae21-5995e885108e}" FieldId="{57787491-e967-4483-a458-ee88f4e22115}" Order="2" Ascend="true">
+				<Audit CreateUser="Administrator" CreateDate=" 3 APR 2022" CreateTime=" 2:24:42PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 3 APR 2022" ModifiedTime=" 2:24:42PM" ModifiedVersionNumber="1"/>
+			</Component>
+		</Key>
+		<Key Guid="{c2872403-3266-46b3-b9a0-5bfd65694527}" Order="6" Name="key9_base_ukey" ExternalName="key9_base_ukey" Description="Select specific item." KeyType="KEY" Unique="true">
+			<Audit CreateUser="Administrator" CreateDate=" 3 APR 2022" CreateTime=" 2:24:42PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="28 APR 2022" ModifiedTime=" 8:40:07AM" ModifiedVersionNumber="1"/>
+			<Component Guid="{3573e59f-cabf-43d1-9763-64b93f8e313f}" FieldId="{b1f1b482-a1c8-4aab-83be-52c5c7ef9e8f}" Order="1" Ascend="true">
+				<Audit CreateUser="Administrator" CreateDate=" 3 APR 2022" CreateTime=" 2:24:42PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 3 APR 2022" ModifiedTime=" 2:24:42PM" ModifiedVersionNumber="1"/>
+			</Component>
+			<Component Guid="{16fc1962-30df-4599-b697-4bfd5fdb3a11}" FieldId="{57787491-e967-4483-a458-ee88f4e22115}" Order="2" Ascend="true">
+				<Audit CreateUser="Administrator" CreateDate=" 3 APR 2022" CreateTime=" 2:24:42PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 3 APR 2022" ModifiedTime=" 2:24:42PM" ModifiedVersionNumber="1"/>
+			</Component>
+		</Key>
+		<Key Guid="{0d0f86e4-353b-4837-9e18-d784845ff792}" Order="7" Name="keya_base_ukey" ExternalName="keya_base_ukey" Description="Sort key." KeyType="KEY" Unique="true">
+			<Audit CreateUser="Administrator" CreateDate=" 3 APR 2022" CreateTime=" 2:24:42PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="28 APR 2022" ModifiedTime=" 8:40:22AM" ModifiedVersionNumber="1"/>
+			<Component Guid="{a5b10f1e-0c14-4821-8113-ee57803098ac}" FieldId="{57787491-e967-4483-a458-ee88f4e22115}" Order="1" Ascend="true">
+				<Audit CreateUser="Administrator" CreateDate=" 3 APR 2022" CreateTime=" 2:24:42PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 3 APR 2022" ModifiedTime=" 2:24:42PM" ModifiedVersionNumber="1"/>
+			</Component>
+		</Key>
+	</Table>
+	<Table Guid="{f3d8779d-9c54-4db1-8852-cbce49b824b9}" Name="gtGlobal" Description="Global Definitions" Prefix="gtGLO" Driver="TOPSPEED" Thread="true" Bindable="true">
+		<Audit CreateUser="Administrator" CreateDate="26 APR 2022" CreateTime=" 5:05:22PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="27 APR 2022" ModifiedTime="12:50:06PM" ModifiedVersionNumber="1"/>
+		<Field Guid="{9bc5372f-e485-4e7d-98e3-0c2941270599}" Name="defIntl" DataType="GROUP" Size="1" ScreenPicture="@s1" ScreenPrompt="def Intl:" ReportHeading="def Intl" Justification="LEFT" FormTab="&apos;Data&apos;" ReportControl=" STRING(@s1),USE(gtGLO:defIntl),LEFT">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;def Intl:&apos;),USE(?gtGLO:defIntl:Prompt)"/>
+				<Line Text=" ENTRY(@s1),USE(gtGLO:defIntl),LEFT"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate="26 APR 2022" CreateTime=" 5:10:07PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:34:56PM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+			<Comment Text="Has to match gtIntl in the types.equ definition.">
+				<Audit CreateUser="Administrator" CreateDate="26 APR 2022" CreateTime=" 5:10:07PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:10:07PM" ModifiedVersionNumber="1"/>
+			</Comment>
+			<Field Guid="{1d5d8c39-eb47-4b08-a5ed-e6482e7a0489}" Name="intl_code_def" DataType="GROUP" Size="1" ScreenPicture="@s20" ScreenPrompt="intl code def:" ReportHeading="intl code def" FormTab="&apos;Data&apos;" ReportControl=" STRING(@s20),USE(gtGLO:intl_code_def)">
+				<WindowControl>
+					<Line Text=" PROMPT(&apos;intl code def:&apos;),USE(?gtGLO:intl_code_def:Prompt)"/>
+					<Line Text=" ENTRY(@s20),USE(gtGLO:intl_code_def)"/>
+				</WindowControl>
+				<Audit CreateUser="Administrator" CreateDate="26 APR 2022" CreateTime=" 5:10:07PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:10:07PM" ModifiedVersionNumber="1"/>
+				<Validity Check="NOCHECKS"/>
+				<Field Guid="{97a077e1-332d-44ad-b469-acaf06f53fef}" Name="ic_led" Description="Language default." DataType="STRING" Size="9" ScreenPicture="@s9" ScreenPrompt="Default Language:" ReportHeading="LED" Justification="LEFT" FormTab="&apos;Intl Code&apos;" Message="Language default." Tooltip="Language default." ReportControl=" STRING(@s9),USE(gtGLO:ic_led),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;Default Language:&apos;),USE(?gtGLO:ic_led:Prompt)"/>
+						<Line Text=" ENTRY(@s9),USE(gtGLO:ic_led),LEFT,MSG(&apos;Language default.&apos;),TIP(&apos;Language default.&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate="26 APR 2022" CreateTime=" 5:10:07PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:10:07PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+				<Field Guid="{04120b41-5abb-48af-9b49-a349205b67f1}" Name="ic_le" Description="Language." DataType="STRING" Size="9" ScreenPicture="@s9" ScreenPrompt="Language:" ReportHeading="LE" Justification="LEFT" FormTab="&apos;Intl Code&apos;" Message="Language." Tooltip="Language." ReportControl=" STRING(@s9),USE(gtGLO:ic_le),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;Language:&apos;),USE(?gtGLO:ic_le:Prompt)"/>
+						<Line Text=" ENTRY(@s9),USE(gtGLO:ic_le),LEFT,MSG(&apos;Language.&apos;),TIP(&apos;Language.&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate="26 APR 2022" CreateTime=" 5:10:07PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:10:07PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+				<Field Guid="{3b979bd8-3af7-4152-83df-56cec2ceaf5f}" Name="ic_cu" Description="Currency." DataType="STRING" Size="9" ScreenPicture="@s9" ScreenPrompt="Currency:" ReportHeading="CU" Justification="LEFT" FormTab="&apos;Intl Code&apos;" Message="Currency." Tooltip="Currency." ReportControl=" STRING(@s9),USE(gtGLO:ic_cu),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;Currency:&apos;),USE(?gtGLO:ic_cu:Prompt)"/>
+						<Line Text=" ENTRY(@s9),USE(gtGLO:ic_cu),LEFT,MSG(&apos;Currency.&apos;),TIP(&apos;Currency.&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate="26 APR 2022" CreateTime=" 5:10:07PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:10:07PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+				<Field Guid="{5ee5cf73-da47-4d12-93cc-2168465a021b}" Name="ic_cr" Description="Calendar." DataType="STRING" Size="9" ScreenPicture="@s9" ScreenPrompt="Calendar:" ReportHeading="CR" Justification="LEFT" FormTab="&apos;Intl Code&apos;" Message="Calendar." Tooltip="Calendar." ReportControl=" STRING(@s9),USE(gtGLO:ic_cr),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;Calendar:&apos;),USE(?gtGLO:ic_cr:Prompt)"/>
+						<Line Text=" ENTRY(@s9),USE(gtGLO:ic_cr),LEFT,MSG(&apos;Calendar.&apos;),TIP(&apos;Calendar.&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate="26 APR 2022" CreateTime=" 5:10:07PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:10:07PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+				<Field Guid="{014bab79-64c0-474c-a323-f23a54daf6d7}" Name="ic_tz" Description="Time zone." DataType="STRING" Size="9" ScreenPicture="@s9" ScreenPrompt="Time Zone:" ReportHeading="TZ" Justification="LEFT" FormTab="&apos;Intl Code&apos;" Message="Time zone." Tooltip="Time zone." ReportControl=" STRING(@s9),USE(gtGLO:ic_tz),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;Time Zone:&apos;),USE(?gtGLO:ic_tz:Prompt)"/>
+						<Line Text=" ENTRY(@s9),USE(gtGLO:ic_tz),LEFT,MSG(&apos;Time zone.&apos;),TIP(&apos;Time zone.&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate="26 APR 2022" CreateTime=" 5:10:07PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:10:07PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+				<Field Guid="{608e53d6-3180-41c2-8dd5-64fb19bfd689}" Name="ic_mc" Description="Measure class." DataType="STRING" Size="9" ScreenPicture="@s9" ScreenPrompt="Measure Class:" ReportHeading="MC" Justification="LEFT" FormTab="&apos;Intl Code&apos;" Message="Measure class." Tooltip="Measure class." ReportControl=" STRING(@s9),USE(gtGLO:ic_mc),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;Measure Class:&apos;),USE(?gtGLO:ic_mc:Prompt)"/>
+						<Line Text=" ENTRY(@s9),USE(gtGLO:ic_mc),LEFT,MSG(&apos;Measure class.&apos;),TIP(&apos;Measure class.&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate="26 APR 2022" CreateTime=" 5:10:07PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:10:07PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+				<Field Guid="{77365a02-67bc-4e02-9a82-8361157e3403}" Name="ic_md" Description="Measure dimension." DataType="STRING" Size="9" ScreenPicture="@s9" ScreenPrompt="Measure Dimension:" ReportHeading="MD:" Justification="LEFT" FormTab="&apos;Intl Code&apos;" Message="Measure dimension." Tooltip="Measure dimension." ReportControl=" STRING(@s9),USE(gtGLO:ic_md),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;Measure Dimension:&apos;),USE(?gtGLO:ic_md:Prompt)"/>
+						<Line Text=" ENTRY(@s9),USE(gtGLO:ic_md),LEFT,MSG(&apos;Measure dimension.&apos;),TIP(&apos;Measure dimension.&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate="26 APR 2022" CreateTime=" 5:10:07PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:10:07PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+				<Field Guid="{64e04713-5f75-4a49-a8a4-6df0f2c0d9e8}" Name="ic_mu" Description="Unit of measure." DataType="STRING" Size="9" ScreenPicture="@s9" ScreenPrompt="Unit of Measure:" ReportHeading="MU" Justification="LEFT" FormTab="&apos;Intl Code&apos;" Message="Unit of measure." Tooltip="Unit of measure." ReportControl=" STRING(@s9),USE(gtGLO:ic_mu),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;Unit of Measure:&apos;),USE(?gtGLO:ic_mu:Prompt)"/>
+						<Line Text=" ENTRY(@s9),USE(gtGLO:ic_mu),LEFT,MSG(&apos;Unit of measure.&apos;),TIP(&apos;Unit of measure.&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate="26 APR 2022" CreateTime=" 5:10:07PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:10:07PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+			</Field>
+			<Field Guid="{a1e8ba43-5400-4d28-bda9-58d90e93af31}" Name="i_code" Description="I-CODE:" DataType="STRING" Size="9" Dim1="8" ScreenPicture="@s9" ScreenPrompt="I-CODE:" ReportHeading="I-CODE" Justification="LEFT" Over="intl_code_def" FormTab="&apos;Data&apos;" Message="I-CODE:" Tooltip="I-CODE:" ReportControl=" STRING(@s9),USE(gtGLO:i_code),LEFT">
+				<WindowControl>
+					<Line Text=" PROMPT(&apos;I-CODE:&apos;),USE(?gtGLO:i_code:Prompt)"/>
+					<Line Text=" ENTRY(@s9),USE(gtGLO:i_code),LEFT,MSG(&apos;I-CODE:&apos;),TIP(&apos;I-CODE:&apos;)"/>
+				</WindowControl>
+				<Audit CreateUser="Administrator" CreateDate=" 4 NOV 2020" CreateTime="11:59:49AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:50:42PM" ModifiedVersionNumber="1"/>
+				<Validity Check="NOCHECKS"/>
+			</Field>
+			<Field Guid="{94cde405-605c-4455-9356-7e6609143700}" Name="intl_guid_def" DataType="GROUP" Size="1" ScreenPicture="@s20" ScreenPrompt="intl guid def:" ReportHeading="intl guid def" FormTab="&apos;Data&apos;" ReportControl=" STRING(@s20),USE(gtGLO:intl_guid_def)">
+				<WindowControl>
+					<Line Text=" PROMPT(&apos;intl guid def:&apos;),USE(?gtGLO:intl_guid_def:Prompt)"/>
+					<Line Text=" ENTRY(@s20),USE(gtGLO:intl_guid_def)"/>
+				</WindowControl>
+				<Audit CreateUser="Administrator" CreateDate="26 APR 2022" CreateTime=" 5:10:07PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:10:07PM" ModifiedVersionNumber="1"/>
+				<Validity Check="NOCHECKS"/>
+				<Field Guid="{8b0dbe73-280d-484a-b3bc-e86bc27efdc0}" Name="ig_led" Description="Language default." DataType="STRING" Size="16" ScreenPicture="@s16" ScreenPrompt="Language Default:" ReportHeading="LED" Justification="LEFT" FormTab="&apos;Intl GUID&apos;" Message="Language default." Tooltip="Language default." ReportControl=" STRING(@s16),USE(gtGLO:ig_led),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;Language Default:&apos;),USE(?gtGLO:ig_led:Prompt)"/>
+						<Line Text=" ENTRY(@s16),USE(gtGLO:ig_led),LEFT,MSG(&apos;Language default.&apos;),TIP(&apos;Language default.&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate="26 APR 2022" CreateTime=" 5:10:07PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:10:07PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+				<Field Guid="{4250ac09-f955-4d50-bb40-712e8834050b}" Name="ig_le" Description="Language." DataType="STRING" Size="16" ScreenPicture="@s16" ScreenPrompt="Language:" ReportHeading="LE" Justification="LEFT" FormTab="&apos;Intl GUID&apos;" Message="Language." Tooltip="Language." ReportControl=" STRING(@s16),USE(gtGLO:ig_le),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;Language:&apos;),USE(?gtGLO:ig_le:Prompt)"/>
+						<Line Text=" ENTRY(@s16),USE(gtGLO:ig_le),LEFT,MSG(&apos;Language.&apos;),TIP(&apos;Language.&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate="26 APR 2022" CreateTime=" 5:10:07PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:10:07PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+				<Field Guid="{5da28ebc-8f2a-4899-a827-3f79d93f1215}" Name="ig_cu" Description="Currency." DataType="STRING" Size="16" ScreenPicture="@s16" ScreenPrompt="Currency:" ReportHeading="CU" Justification="LEFT" FormTab="&apos;Intl GUID&apos;" Message="Currency." Tooltip="Currency." ReportControl=" STRING(@s16),USE(gtGLO:ig_cu),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;Currency:&apos;),USE(?gtGLO:ig_cu:Prompt)"/>
+						<Line Text=" ENTRY(@s16),USE(gtGLO:ig_cu),LEFT,MSG(&apos;Currency.&apos;),TIP(&apos;Currency.&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate="26 APR 2022" CreateTime=" 5:10:07PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:10:07PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+				<Field Guid="{a7e9a594-2b6c-478f-ae03-6b48330d5ab9}" Name="ig_cr" Description="Calendar." DataType="STRING" Size="16" ScreenPicture="@s16" ScreenPrompt="Currency:" ReportHeading="CR" Justification="LEFT" FormTab="&apos;Intl GUID&apos;" Message="Calendar." Tooltip="Calendar." ReportControl=" STRING(@s16),USE(gtGLO:ig_cr),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;Currency:&apos;),USE(?gtGLO:ig_cr:Prompt)"/>
+						<Line Text=" ENTRY(@s16),USE(gtGLO:ig_cr),LEFT,MSG(&apos;Calendar.&apos;),TIP(&apos;Calendar.&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate="26 APR 2022" CreateTime=" 5:10:07PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:10:07PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+				<Field Guid="{6437a0c8-1825-49be-81ca-07737fb646ba}" Name="ig_tz" Description="Time zone." DataType="STRING" Size="16" ScreenPicture="@s16" ScreenPrompt="Time Zone:" ReportHeading="TZ" Justification="LEFT" FormTab="&apos;Intl GUID&apos;" Message="Time zone." Tooltip="Time zone." ReportControl=" STRING(@s16),USE(gtGLO:ig_tz),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;Time Zone:&apos;),USE(?gtGLO:ig_tz:Prompt)"/>
+						<Line Text=" ENTRY(@s16),USE(gtGLO:ig_tz),LEFT,MSG(&apos;Time zone.&apos;),TIP(&apos;Time zone.&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate="26 APR 2022" CreateTime=" 5:10:07PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:10:07PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+				<Field Guid="{3c786d53-474e-43fd-bbf9-4488eebc6baa}" Name="ig_mc" Description="Measure class." DataType="STRING" Size="16" ScreenPicture="@s16" ScreenPrompt="Measure Class:" ReportHeading="MC" Justification="LEFT" FormTab="&apos;Intl GUID&apos;" Message="Measure class." Tooltip="Measure class." ReportControl=" STRING(@s16),USE(gtGLO:ig_mc),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;Measure Class:&apos;),USE(?gtGLO:ig_mc:Prompt)"/>
+						<Line Text=" ENTRY(@s16),USE(gtGLO:ig_mc),LEFT,MSG(&apos;Measure class.&apos;),TIP(&apos;Measure class.&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate="26 APR 2022" CreateTime=" 5:10:07PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:10:07PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+				<Field Guid="{24641458-dfe5-456e-9e35-c69a80dfddd4}" Name="ig_md" Description="Measure dimension." DataType="STRING" Size="16" ScreenPicture="@s16" ScreenPrompt="Measure Dimension:" ReportHeading="MD" Justification="LEFT" FormTab="&apos;Intl GUID&apos;" Message="Measure dimension." Tooltip="Measure dimension." ReportControl=" STRING(@s16),USE(gtGLO:ig_md),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;Measure Dimension:&apos;),USE(?gtGLO:ig_md:Prompt)"/>
+						<Line Text=" ENTRY(@s16),USE(gtGLO:ig_md),LEFT,MSG(&apos;Measure dimension.&apos;),TIP(&apos;Measure dimension.&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate="26 APR 2022" CreateTime=" 5:10:07PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:10:07PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+				<Field Guid="{94161f07-4364-4067-ab85-a85683d7c40d}" Name="ig_mu" Description="Unit of measure." DataType="STRING" Size="16" ScreenPicture="@s16" ScreenPrompt="Unit of Measure:" ReportHeading="MU" Justification="LEFT" FormTab="&apos;Intl GUID&apos;" Message="Unit of measure." Tooltip="Unit of measure." ReportControl=" STRING(@s16),USE(gtGLO:ig_mu),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;Unit of Measure:&apos;),USE(?gtGLO:ig_mu:Prompt)"/>
+						<Line Text=" ENTRY(@s16),USE(gtGLO:ig_mu),LEFT,MSG(&apos;Unit of measure.&apos;),TIP(&apos;Unit of measure.&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate="26 APR 2022" CreateTime=" 5:10:07PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="27 APR 2022" ModifiedTime="12:50:06PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+			</Field>
+			<Field Guid="{d5448085-0461-49ea-809f-51543a4c8a03}" Name="i_guid" Description="I-GUID:" DataType="STRING" Size="16" Dim1="8" ScreenPicture="@s16" ScreenPrompt="I-GUID:" ReportHeading="I-GUID" Over="intl_guid_def" FormTab="&apos;Data&apos;" Message="I-GUID:" Tooltip="I-GUID:" ReportControl=" STRING(@s16),USE(gtGLO:i_guid),LEFT">
+				<WindowControl>
+					<Line Text=" PROMPT(&apos;I-GUID:&apos;),USE(?gtGLO:i_guid:Prompt)"/>
+					<Line Text=" ENTRY(@s16),USE(gtGLO:i_guid),LEFT,MSG(&apos;I-GUID:&apos;),TIP(&apos;I-GUID:&apos;)"/>
+				</WindowControl>
+				<Audit CreateUser="Administrator" CreateDate=" 4 NOV 2020" CreateTime="12:18:46PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:51:32PM" ModifiedVersionNumber="1"/>
+				<Validity Check="NOCHECKS"/>
+			</Field>
+			<Field Guid="{cfc8afc2-96fa-4a1d-b8dc-7650a4623879}" Name="area_code_def" DataType="GROUP" Size="1" ScreenPicture="@s1" ScreenPrompt="area code def:" ReportHeading="area code def" ReportControl=" STRING(@s1),USE(gtGLO:area_code_def)">
+				<WindowControl>
+					<Line Text=" PROMPT(&apos;area code def:&apos;),USE(?gtGLO:area_code_def:Prompt)"/>
+					<Line Text=" ENTRY(@s1),USE(gtGLO:area_code_def)"/>
+				</WindowControl>
+				<Audit CreateUser="Administrator" CreateDate="26 APR 2022" CreateTime=" 5:10:07PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:52:58PM" ModifiedVersionNumber="1"/>
+				<Validity Check="NOCHECKS"/>
+				<Field Guid="{1dd245e1-97cd-45cb-8144-436a883c7009}" Name="ac_ga" Description="Star." DataType="STRING" Size="9" ScreenPicture="@s9" ScreenPrompt="Star:" ReportHeading="ST" Justification="LEFT" FormTab="&apos;Area CODE&apos;" Message="Star." Tooltip="Star." ReportControl=" STRING(@s9),USE(gtGLO:ac_ga),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;Star:&apos;),USE(?gtGLO:ac_ga:Prompt)"/>
+						<Line Text=" ENTRY(@s9),USE(gtGLO:ac_ga),LEFT,MSG(&apos;Star.&apos;),TIP(&apos;Star.&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate=" 4 NOV 2020" CreateTime="12:26:28PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:16:20PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+				<Field Guid="{13f0a6da-c205-4cc4-8a6d-e5d967339134}" Name="ac_gb" Description="Planet." DataType="STRING" Size="9" ScreenPicture="@s9" ScreenPrompt="Planet:" ReportHeading="PT" Justification="LEFT" FormTab="&apos;Area CODE&apos;" Message="Planet." Tooltip="Planet." ReportControl=" STRING(@s9),USE(gtGLO:ac_gb),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;Planet:&apos;),USE(?gtGLO:ac_gb:Prompt)"/>
+						<Line Text=" ENTRY(@s9),USE(gtGLO:ac_gb),LEFT,MSG(&apos;Planet.&apos;),TIP(&apos;Planet.&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate=" 4 NOV 2020" CreateTime="12:26:28PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:16:05PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+				<Field Guid="{f9f6e2f7-a67f-4213-ba0f-5a0ac2eb12a4}" Name="ac_gc" Description="Continent." DataType="STRING" Size="9" ScreenPicture="@s9" ScreenPrompt="Continent:" ReportHeading="CO" Justification="LEFT" FormTab="&apos;Area CODE&apos;" Message="Continent." Tooltip="Continent." ReportControl=" STRING(@s9),USE(gtGLO:ac_gc),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;Continent:&apos;),USE(?gtGLO:ac_gc:Prompt)"/>
+						<Line Text=" ENTRY(@s9),USE(gtGLO:ac_gc),LEFT,MSG(&apos;Continent.&apos;),TIP(&apos;Continent.&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate=" 4 NOV 2020" CreateTime="12:30:49PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:15:54PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+				<Field Guid="{e47aeac8-0721-4676-9286-7e652e417a92}" Name="ac_gd" Description="Continent area." DataType="STRING" Size="9" ScreenPicture="@s9" ScreenPrompt="Continent Area:" ReportHeading="AR" Justification="LEFT" FormTab="&apos;Area CODE&apos;" Message="Continent area." Tooltip="Continent area." ReportControl=" STRING(@s9),USE(gtGLO:ac_gd),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;Continent Area:&apos;),USE(?gtGLO:ac_gd:Prompt)"/>
+						<Line Text=" ENTRY(@s9),USE(gtGLO:ac_gd),LEFT,MSG(&apos;Continent area.&apos;),TIP(&apos;Continent area.&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate=" 4 NOV 2020" CreateTime="12:33:12PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:15:41PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+				<Field Guid="{a697d082-13b5-47c7-965e-0d653e83ebb4}" Name="ac_ge" Description="Country." DataType="STRING" Size="9" ScreenPicture="@s9" ScreenPrompt="Country:" ReportHeading="CY" Justification="LEFT" FormTab="&apos;Area CODE&apos;" Message="Country." Tooltip="Country." ReportControl=" STRING(@s9),USE(gtGLO:ac_ge),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;Country:&apos;),USE(?gtGLO:ac_ge:Prompt)"/>
+						<Line Text=" ENTRY(@s9),USE(gtGLO:ac_ge),LEFT,MSG(&apos;Country.&apos;),TIP(&apos;Country.&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate=" 4 NOV 2020" CreateTime="12:34:20PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:15:31PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+				<Field Guid="{59128ad1-e38b-432f-8d4f-f3311cdf9809}" Name="ac_g1" Description="ADM1:" DataType="STRING" Size="9" ScreenPicture="@s9" ScreenPrompt="ADM1:" ReportHeading="A1" Justification="LEFT" FormTab="&apos;Area CODE&apos;" Message="ADM1:" Tooltip="ADM1:" ReportControl=" STRING(@s9),USE(gtGLO:ac_g1),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;ADM1:&apos;),USE(?gtGLO:ac_g1:Prompt)"/>
+						<Line Text=" ENTRY(@s9),USE(gtGLO:ac_g1),LEFT,MSG(&apos;ADM1:&apos;),TIP(&apos;ADM1:&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate=" 4 NOV 2020" CreateTime="12:43:50PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:32:34PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+				<Field Guid="{d9687b3d-5274-48d4-beaa-5e4a9b769d1b}" Name="ac_g2" Description="ADM2:" DataType="STRING" Size="9" ScreenPicture="@s9" ScreenPrompt="ADM2:" ReportHeading="A2" Justification="LEFT" FormTab="&apos;Area CODE&apos;" Message="ADM2:" Tooltip="ADM2:" ReportControl=" STRING(@s9),USE(gtGLO:ac_g2),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;ADM2:&apos;),USE(?gtGLO:ac_g2:Prompt)"/>
+						<Line Text=" ENTRY(@s9),USE(gtGLO:ac_g2),LEFT,MSG(&apos;ADM2:&apos;),TIP(&apos;ADM2:&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate=" 4 NOV 2020" CreateTime="12:43:50PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:31:17PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+				<Field Guid="{58dcec67-bf3a-4f37-9dc6-98e3d3c6824e}" Name="ac_g3" Description="ADM3:" DataType="STRING" Size="9" ScreenPicture="@s9" ScreenPrompt="ADM3:" ReportHeading="A3" Justification="LEFT" FormTab="&apos;Area CODE&apos;" Message="ADM3:" Tooltip="ADM3:" ReportControl=" STRING(@s9),USE(gtGLO:ac_g3),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;ADM3:&apos;),USE(?gtGLO:ac_g3:Prompt)"/>
+						<Line Text=" ENTRY(@s9),USE(gtGLO:ac_g3),LEFT,MSG(&apos;ADM3:&apos;),TIP(&apos;ADM3:&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate=" 4 NOV 2020" CreateTime="12:46:12PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:23:53PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+				<Field Guid="{5a64aad4-2a54-4312-899a-710aa173277a}" Name="ac_g4" Description="ADM4:" DataType="STRING" Size="9" ScreenPicture="@s9" ScreenPrompt="ADM4:" ReportHeading="A4" Justification="LEFT" FormTab="&apos;Area CODE&apos;" Message="ADM4:" Tooltip="ADM4:" ReportControl=" STRING(@s9),USE(gtGLO:ac_g4),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;ADM4:&apos;),USE(?gtGLO:ac_g4:Prompt)"/>
+						<Line Text=" ENTRY(@s9),USE(gtGLO:ac_g4),LEFT,MSG(&apos;ADM4:&apos;),TIP(&apos;ADM4:&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate=" 4 NOV 2020" CreateTime="12:47:15PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:23:37PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+				<Field Guid="{da96d2f3-f131-41ae-93c8-42165d7066f2}" Name="ac_g5" Description="ADM5:" DataType="STRING" Size="9" ScreenPicture="@s9" ScreenPrompt="ADM5:" ReportHeading="A5" Justification="LEFT" FormTab="&apos;Area CODE&apos;" Message="ADM5:" Tooltip="ADM5:" ReportControl=" STRING(@s9),USE(gtGLO:ac_g5),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;ADM5:&apos;),USE(?gtGLO:ac_g5:Prompt)"/>
+						<Line Text=" ENTRY(@s9),USE(gtGLO:ac_g5),LEFT,MSG(&apos;ADM5:&apos;),TIP(&apos;ADM5:&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate=" 4 NOV 2020" CreateTime="12:50:22PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:23:59PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+				<Field Guid="{04555384-2e87-468f-9689-9da56a38564a}" Name="ac_g6" Description="ADM6:" DataType="STRING" Size="9" ScreenPicture="@s9" ScreenPrompt="ADM6:" ReportHeading="A6" Justification="LEFT" FormTab="&apos;Area CODE&apos;" Message="ADM6:" Tooltip="ADM6:" ReportControl=" STRING(@s9),USE(gtGLO:ac_g6),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;ADM6:&apos;),USE(?gtGLO:ac_g6:Prompt)"/>
+						<Line Text=" ENTRY(@s9),USE(gtGLO:ac_g6),LEFT,MSG(&apos;ADM6:&apos;),TIP(&apos;ADM6:&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate=" 4 NOV 2020" CreateTime="12:50:22PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:24:08PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+				<Field Guid="{4478faee-8cd5-47f1-afa3-f389a58a5926}" Name="ac_g7" Description="ADM7:" DataType="STRING" Size="9" ScreenPicture="@s9" ScreenPrompt="ADM7:" ReportHeading="A7" Justification="LEFT" FormTab="&apos;Area CODE&apos;" Message="ADM7:" Tooltip="ADM7:" ReportControl=" STRING(@s9),USE(gtGLO:ac_g7),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;ADM7:&apos;),USE(?gtGLO:ac_g7:Prompt)"/>
+						<Line Text=" ENTRY(@s9),USE(gtGLO:ac_g7),LEFT,MSG(&apos;ADM7:&apos;),TIP(&apos;ADM7:&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate=" 4 NOV 2020" CreateTime="12:51:58PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:24:14PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+				<Field Guid="{1f526ad8-895c-400b-beed-e6ddd9821571}" Name="ac_g8" Description="ADM8:" DataType="STRING" Size="9" ScreenPicture="@s9" ScreenPrompt="ADM8:" ReportHeading="A8" Justification="LEFT" FormTab="&apos;Area CODE&apos;" Message="ADM8:" Tooltip="ADM8:" ReportControl=" STRING(@s9),USE(gtGLO:ac_g8),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;ADM8:&apos;),USE(?gtGLO:ac_g8:Prompt)"/>
+						<Line Text=" ENTRY(@s9),USE(gtGLO:ac_g8),LEFT,MSG(&apos;ADM8:&apos;),TIP(&apos;ADM8:&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate=" 4 NOV 2020" CreateTime="12:51:59PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:24:16PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+				<Field Guid="{241218ca-93c5-46be-aef3-3cdf7573763c}" Name="ac_g9" Description="ADM9:" DataType="STRING" Size="9" ScreenPicture="@s9" ScreenPrompt="ADM9:" ReportHeading="A9" Justification="LEFT" FormTab="&apos;Area CODE&apos;" Message="ADM9:" Tooltip="ADM9:" ReportControl=" STRING(@s9),USE(gtGLO:ac_g9),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;ADM9:&apos;),USE(?gtGLO:ac_g9:Prompt)"/>
+						<Line Text=" ENTRY(@s9),USE(gtGLO:ac_g9),LEFT,MSG(&apos;ADM9:&apos;),TIP(&apos;ADM9:&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate=" 4 NOV 2020" CreateTime="12:54:22PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:30:00PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+			</Field>
+			<Field Guid="{7fb0d7a7-1714-43ae-b0ef-03c78c5e0474}" Name="a_code" Description="A-CODE:" DataType="STRING" Size="9" Dim1="14" ScreenPicture="@s9" ScreenPrompt="A-CODE:" ReportHeading="A-CODE" Justification="LEFT" Over="area_code_def" FormTab="&apos;Data&apos;" Message="A-CODE:" Tooltip="A-CODE:" ReportControl=" STRING(@s9),USE(gtGLO:a_code),LEFT">
+				<WindowControl>
+					<Line Text=" PROMPT(&apos;A-CODE:&apos;),USE(?gtGLO:a_code:Prompt)"/>
+					<Line Text=" ENTRY(@s9),USE(gtGLO:a_code),LEFT,MSG(&apos;A-CODE:&apos;),TIP(&apos;A-CODE:&apos;)"/>
+				</WindowControl>
+				<Audit CreateUser="Administrator" CreateDate=" 4 NOV 2020" CreateTime=" 1:00:08PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:52:37PM" ModifiedVersionNumber="1"/>
+				<Validity Check="NOCHECKS"/>
+			</Field>
+			<Field Guid="{e96956dd-5d8c-4881-9e59-7da6d592586a}" Name="area_guid_def" DataType="GROUP" ScreenPicture="@s1" ScreenPrompt="area guid def:" ReportHeading="area guid def" FormTab="&apos;Data&apos;" ReportControl=" STRING(@s1),USE(gtGLO:area_guid_def),LEFT">
+				<WindowControl>
+					<Line Text=" PROMPT(&apos;area guid def:&apos;),USE(?gtGLO:area_guid_def:Prompt)"/>
+					<Line Text=" ENTRY(@s1),USE(gtGLO:area_guid_def),LEFT"/>
+				</WindowControl>
+				<Audit CreateUser="Administrator" CreateDate="26 APR 2022" CreateTime=" 5:10:07PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:53:27PM" ModifiedVersionNumber="1"/>
+				<Validity Check="NOCHECKS"/>
+				<Field Guid="{9fa2a232-e57b-40d9-b742-fa74298de7e6}" Name="ag_ga" Description="Star." DataType="STRING" Size="16" ScreenPicture="@s16" ScreenPrompt="Star:" ReportHeading="ST" FormTab="&apos;Area GUID&apos;" Message="Star." Tooltip="Star." ReportControl=" STRING(@s16),USE(gtGLO:ag_ga)">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;Star:&apos;),USE(?gtGLO:ag_ga:Prompt)"/>
+						<Line Text=" ENTRY(@s16),USE(gtGLO:ag_ga),MSG(&apos;Star.&apos;),TIP(&apos;Star.&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate=" 4 NOV 2020" CreateTime=" 1:04:18PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:20:14PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+				<Field Guid="{53d9e5dc-44e6-445a-8b30-c2dd5be7ff8c}" Name="ag_gb" Description="Planet." DataType="STRING" Size="16" ScreenPicture="@s16" ScreenPrompt="Planet:" ReportHeading="PT" FormTab="&apos;Area GUID&apos;" Message="Planet." Tooltip="Planet." ReportControl=" STRING(@s16),USE(gtGLO:ag_gb)">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;Planet:&apos;),USE(?gtGLO:ag_gb:Prompt)"/>
+						<Line Text=" ENTRY(@s16),USE(gtGLO:ag_gb),MSG(&apos;Planet.&apos;),TIP(&apos;Planet.&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate=" 4 NOV 2020" CreateTime=" 1:04:18PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:19:32PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+				<Field Guid="{3d463f93-cd3a-44a5-92b7-e2236784944f}" Name="ag_gc" Description="Continent." DataType="STRING" Size="16" ScreenPicture="@s16" ScreenPrompt="Continent:" ReportHeading="CO" Justification="LEFT" FormTab="&apos;Area GUID&apos;" Message="Continent." Tooltip="Continent." ReportControl=" STRING(@s16),USE(gtGLO:ag_gc),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;Continent:&apos;),USE(?gtGLO:ag_gc:Prompt)"/>
+						<Line Text=" ENTRY(@s16),USE(gtGLO:ag_gc),LEFT,MSG(&apos;Continent.&apos;),TIP(&apos;Continent.&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate=" 4 NOV 2020" CreateTime=" 1:07:35PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:18:42PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+				<Field Guid="{728a7d78-2549-4e7f-b061-f56f9baa30c4}" Name="ag_gd" Description="Continent area." DataType="STRING" Size="16" ScreenPicture="@s16" ScreenPrompt="Continent Area:" ReportHeading="AR" Justification="LEFT" FormTab="&apos;Area GUID&apos;" Message="Continent area." Tooltip="Continent area." ReportControl=" STRING(@s16),USE(gtGLO:ag_gd),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;Continent Area:&apos;),USE(?gtGLO:ag_gd:Prompt)"/>
+						<Line Text=" ENTRY(@s16),USE(gtGLO:ag_gd),LEFT,MSG(&apos;Continent area.&apos;),TIP(&apos;Continent area.&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate=" 4 NOV 2020" CreateTime=" 1:08:09PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:18:32PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+				<Field Guid="{2561e3dc-f811-47d7-b12e-61f9297e53ad}" Name="ag_ge" Description="Country." DataType="STRING" Size="16" ScreenPicture="@s16" ScreenPrompt="Country:" ReportHeading="CY" Justification="LEFT" FormTab="&apos;Area GUID&apos;" Message="Country." Tooltip="Country." ReportControl=" STRING(@s16),USE(gtGLO:ag_ge),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;Country:&apos;),USE(?gtGLO:ag_ge:Prompt)"/>
+						<Line Text=" ENTRY(@s16),USE(gtGLO:ag_ge),LEFT,MSG(&apos;Country.&apos;),TIP(&apos;Country.&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate=" 4 NOV 2020" CreateTime=" 1:09:29PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:18:25PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+				<Field Guid="{e4de950c-0c53-4234-8a21-6fe12e9eaa83}" Name="ag_g1" Description="ADM1:" DataType="STRING" Size="16" ScreenPicture="@s16" ScreenPrompt="ADM1:" ReportHeading="A1" Justification="LEFT" FormTab="&apos;Area GUID&apos;" Message="ADM1:" Tooltip="ADM1:" ReportControl=" STRING(@s16),USE(gtGLO:ag_g1),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;ADM1:&apos;),USE(?gtGLO:ag_g1:Prompt)"/>
+						<Line Text=" ENTRY(@s16),USE(gtGLO:ag_g1),LEFT,MSG(&apos;ADM1:&apos;),TIP(&apos;ADM1:&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate=" 4 NOV 2020" CreateTime=" 1:09:30PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:28:06PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+				<Field Guid="{374fd61b-035d-4b53-891e-e3a9ee8a2d7b}" Name="ag_g2" Description="ADM2:" DataType="STRING" Size="16" ScreenPicture="@s16" ScreenPrompt="ADM2:" ReportHeading="A2" Justification="LEFT" FormTab="&apos;Area GUID&apos;" Message="ADM2:" Tooltip="ADM2:" ReportControl=" STRING(@s16),USE(gtGLO:ag_g2),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;ADM2:&apos;),USE(?gtGLO:ag_g2:Prompt)"/>
+						<Line Text=" ENTRY(@s16),USE(gtGLO:ag_g2),LEFT,MSG(&apos;ADM2:&apos;),TIP(&apos;ADM2:&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate=" 4 NOV 2020" CreateTime=" 1:14:43PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:27:42PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+				<Field Guid="{3cbd7374-9fa8-450d-9a8c-e96c14c4c7bd}" Name="ag_g3" Description="ADM3:" DataType="STRING" Size="16" ScreenPicture="@s16" ScreenPrompt="ADM3:" ReportHeading="A3" Justification="LEFT" FormTab="&apos;Area GUID&apos;" Message="ADM3:" Tooltip="ADM3:" ReportControl=" STRING(@s16),USE(gtGLO:ag_g3),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;ADM3:&apos;),USE(?gtGLO:ag_g3:Prompt)"/>
+						<Line Text=" ENTRY(@s16),USE(gtGLO:ag_g3),LEFT,MSG(&apos;ADM3:&apos;),TIP(&apos;ADM3:&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate=" 4 NOV 2020" CreateTime=" 1:18:22PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:25:02PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+				<Field Guid="{975b45bf-c194-4d67-8506-e9a864f7f750}" Name="ag_g4" Description="ADM4:" DataType="STRING" Size="16" ScreenPicture="@s16" ScreenPrompt="ADM4:" ReportHeading="A4" Justification="LEFT" FormTab="&apos;Area GUID&apos;" Message="ADM4:" Tooltip="ADM4:" ReportControl=" STRING(@s16),USE(gtGLO:ag_g4),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;ADM4:&apos;),USE(?gtGLO:ag_g4:Prompt)"/>
+						<Line Text=" ENTRY(@s16),USE(gtGLO:ag_g4),LEFT,MSG(&apos;ADM4:&apos;),TIP(&apos;ADM4:&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate=" 4 NOV 2020" CreateTime=" 1:19:14PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:25:08PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+				<Field Guid="{ba255f0f-9928-4b38-b03f-cb3072910abd}" Name="ag_g5" Description="ADM5:" DataType="STRING" Size="16" ScreenPicture="@s16" ScreenPrompt="ADM5:" ReportHeading="A5" Justification="LEFT" FormTab="&apos;Area GUID&apos;" Message="ADM5:" Tooltip="ADM5:" ReportControl=" STRING(@s16),USE(gtGLO:ag_g5),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;ADM5:&apos;),USE(?gtGLO:ag_g5:Prompt)"/>
+						<Line Text=" ENTRY(@s16),USE(gtGLO:ag_g5),LEFT,MSG(&apos;ADM5:&apos;),TIP(&apos;ADM5:&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate=" 4 NOV 2020" CreateTime=" 1:19:57PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:25:11PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+				<Field Guid="{afb78314-ca56-45b3-8f98-ff46320aab86}" Name="ag_g6" Description="ADM6:" DataType="STRING" Size="16" ScreenPicture="@s16" ScreenPrompt="ADM6:" ReportHeading="A6" Justification="LEFT" FormTab="&apos;Area GUID&apos;" Message="ADM6:" Tooltip="ADM6:" ReportControl=" STRING(@s16),USE(gtGLO:ag_g6),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;ADM6:&apos;),USE(?gtGLO:ag_g6:Prompt)"/>
+						<Line Text=" ENTRY(@s16),USE(gtGLO:ag_g6),LEFT,MSG(&apos;ADM6:&apos;),TIP(&apos;ADM6:&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate=" 4 NOV 2020" CreateTime=" 1:20:34PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:25:14PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+				<Field Guid="{0f6bd000-8072-4bab-b620-9d41f9d32e8b}" Name="ag_g7" Description="ADM7:" DataType="STRING" Size="16" ScreenPicture="@s16" ScreenPrompt="ADM7" ReportHeading="A7" Justification="LEFT" FormTab="&apos;Area GUID&apos;" Message="ADM7:" Tooltip="ADM7:" ReportControl=" STRING(@s16),USE(gtGLO:ag_g7),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;ADM7&apos;),USE(?gtGLO:ag_g7:Prompt)"/>
+						<Line Text=" ENTRY(@s16),USE(gtGLO:ag_g7),LEFT,MSG(&apos;ADM7:&apos;),TIP(&apos;ADM7:&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate=" 4 NOV 2020" CreateTime=" 6:51:41PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:25:21PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+				<Field Guid="{459dbc7a-30aa-4cb3-b554-5a165bd01029}" Name="ag_g8" Description="ADM8:" DataType="STRING" Size="16" ScreenPicture="@s16" ScreenPrompt="ADM8:" ReportHeading="A8" Justification="LEFT" FormTab="&apos;Area GUID&apos;" Message="ADM8:" Tooltip="ADM8:" ReportControl=" STRING(@s16),USE(gtGLO:ag_g8),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;ADM8:&apos;),USE(?gtGLO:ag_g8:Prompt)"/>
+						<Line Text=" ENTRY(@s16),USE(gtGLO:ag_g8),LEFT,MSG(&apos;ADM8:&apos;),TIP(&apos;ADM8:&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate=" 4 NOV 2020" CreateTime=" 6:52:36PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:25:24PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+				<Field Guid="{4254e98c-2b90-4bb2-8c3f-4d1c1bdf31e0}" Name="ag_g9" Description="ADM9:" DataType="STRING" Size="16" ScreenPicture="@s16" ScreenPrompt="ADM9:" ReportHeading="A9" Justification="LEFT" FormTab="&apos;Area GUID&apos;" Message="ADM9:" Tooltip="ADM9:" ReportControl=" STRING(@s16),USE(gtGLO:ag_g9),LEFT">
+					<WindowControl>
+						<Line Text=" PROMPT(&apos;ADM9:&apos;),USE(?gtGLO:ag_g9:Prompt)"/>
+						<Line Text=" ENTRY(@s16),USE(gtGLO:ag_g9),LEFT,MSG(&apos;ADM9:&apos;),TIP(&apos;ADM9:&apos;)"/>
+					</WindowControl>
+					<Audit CreateUser="Administrator" CreateDate=" 4 NOV 2020" CreateTime=" 6:54:24PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:29:01PM" ModifiedVersionNumber="1"/>
+					<Validity Check="NOCHECKS"/>
+				</Field>
+			</Field>
+			<Field Guid="{7b3f0aa1-eefe-481b-a06a-3755eb95643a}" Name="a_guid" Description="A-GUID:" DataType="STRING" Size="16" Dim1="14" ScreenPicture="@s16" ScreenPrompt="A-GUID:" ReportHeading="A-GUID" Justification="LEFT" Over="area_guid_def" FormTab="&apos;Data&apos;" Message="A-GUID:" Tooltip="A-GUID:" ReportControl=" STRING(@s16),USE(gtGLO:a_guid),LEFT">
+				<WindowControl>
+					<Line Text=" PROMPT(&apos;A-GUID:&apos;),USE(?gtGLO:a_guid:Prompt)"/>
+					<Line Text=" ENTRY(@s16),USE(gtGLO:a_guid),LEFT,MSG(&apos;A-GUID:&apos;),TIP(&apos;A-GUID:&apos;)"/>
+				</WindowControl>
+				<Audit CreateUser="Administrator" CreateDate=" 4 NOV 2020" CreateTime=" 1:47:30PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="26 APR 2022" ModifiedTime=" 5:54:02PM" ModifiedVersionNumber="1"/>
+				<Validity Check="NOCHECKS"/>
+			</Field>
+		</Field>
+	</Table>
+	<Table Guid="{468cf9fa-4014-409a-98d7-7ac1a0e2cb6e}" Name="gtDescr" Description="Description definitions" Prefix="gtDESCR" Driver="TOPSPEED" Thread="true" Bindable="true">
+		<Audit CreateUser="Administrator" CreateDate="28 APR 2022" CreateTime=" 8:21:51AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="28 APR 2022" ModifiedTime=" 8:41:31AM" ModifiedVersionNumber="1"/>
+		<Option Property="Version" PropertyType="3" PropertyValue="1"/>
+		<Field Guid="{744baf64-429c-4e99-984f-d77b2c05db2c}" Name="timestamp" Description="Local time stamp." DataType="REAL" Size="8" ScreenPicture="@n15.0B" ScreenPrompt="TS:" ReportHeading="TS" Justification="LEFT" ExternalName="ts" InitialValue="0" FormTab="&apos;Internal&apos;" Message="Local time stamp." Tooltip="Local time stamp." ReportControl=" STRING(@n15.0B),USE(gtDESCR:timestamp),LEFT,FONT(&apos;Consolas&apos;,10)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;TS:&apos;),USE(?gtDESCR:timestamp:Prompt),TRN,FONT(&apos;Segoe UI&apos;,10)"/>
+				<Line Text=" ENTRY(@n15.0B),USE(gtDESCR:timestamp),LEFT,FONT(&apos;Segoe UI&apos;,10),MSG(&apos;Local time stamp.&apos;),TIP(&apos;Local time stamp.&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate="28 APR 2022" CreateTime=" 8:21:51AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="28 APR 2022" ModifiedTime=" 8:21:51AM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+			<Option Property="TimeStamp" PropertyType="3" PropertyValue="1"/>
+			<Option Property="RASQL" PropertyType="1" PropertyValue=","/>
+		</Field>
+		<Field Guid="{fa1a3aa5-07e3-4f7f-b3e6-4d7de5da1273}" Name="servertimestamp" Description="Server time stamp." DataType="REAL" Size="8" ScreenPicture="@n15.0B" ScreenPrompt="STS:" ReportHeading="STS" Justification="LEFT" ExternalName="sts" InitialValue="0" FormTab="&apos;Internal&apos;" Message="Server time stamp." Tooltip="Server time stamp." ReportControl=" STRING(@n15.0B),USE(gtDESCR:servertimestamp),LEFT,FONT(&apos;Consolas&apos;,10)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;STS:&apos;),USE(?gtDESCR:servertimestamp:Prompt),TRN,FONT(&apos;Segoe UI&apos;,10)"/>
+				<Line Text=" ENTRY(@n15.0B),USE(gtDESCR:servertimestamp),LEFT,FONT(&apos;Segoe UI&apos;,10),MSG(&apos;Server time stamp.&apos;),TIP(&apos;Server time stamp.&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate="28 APR 2022" CreateTime=" 8:21:51AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="28 APR 2022" ModifiedTime=" 8:21:51AM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+			<Option Property="ServerTimeStamp" PropertyType="3" PropertyValue="1"/>
+			<Option Property="RASQL" PropertyType="1" PropertyValue=","/>
+		</Field>
+		<Field Guid="{3e08590c-2f0c-481f-be6f-dfcbc2e0bec9}" Name="deletedtimestamp" Description="Deleted time stamp." DataType="REAL" Size="8" ScreenPicture="@n15.0B" ScreenPrompt="DTS:" ReportHeading="DTS" Justification="LEFT" ExternalName="dts" InitialValue="0" FormTab="&apos;Internal&apos;" Message="Deleted time stamp." Tooltip="Deleted time stamp." ReportControl=" STRING(@n15.0B),USE(gtDESCR:deletedtimestamp),LEFT,FONT(&apos;Consolas&apos;,10)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;DTS:&apos;),USE(?gtDESCR:deletedtimestamp:Prompt),TRN,FONT(&apos;Segoe UI&apos;,10)"/>
+				<Line Text=" ENTRY(@n15.0B),USE(gtDESCR:deletedtimestamp),LEFT,FONT(&apos;Segoe UI&apos;,10),MSG(&apos;Deleted time stamp.&apos;),TIP(&apos;Deleted time stamp.&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate="28 APR 2022" CreateTime=" 8:21:51AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="28 APR 2022" ModifiedTime=" 8:21:51AM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+			<Option Property="DeletedTimeStamp" PropertyType="3" PropertyValue="1"/>
+			<Option Property="RASQL" PropertyType="1" PropertyValue=","/>
+		</Field>
+		<Field Guid="{83fa548e-1dc0-49a9-9029-ff154217215d}" Name="encryptionversion" Description="Encryption version." DataType="LONG" Size="4" ScreenPicture="@n-14" ScreenPrompt="Encryption Version:" ReportHeading="EV" Justification="RIGHT" ExternalName="encryptionversion" InitialValue="0" NoPopulate="true" FormTab="&apos;Internal&apos;" Message="Encryption version." Tooltip="Encryption version." ReportControl=" STRING(@n-14),USE(gtDESCR:encryptionversion),RIGHT">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;Encryption Version:&apos;),USE(?gtDESCR:encryptionversion:Prompt)"/>
+				<Line Text=" ENTRY(@n-14),USE(gtDESCR:encryptionversion),RIGHT,MSG(&apos;Encryption version.&apos;),TIP(&apos;Encryption version.&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate="28 APR 2022" CreateTime=" 8:21:51AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="28 APR 2022" ModifiedTime=" 8:21:51AM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+			<Comment Text="Added Encryption Version for Cryptonite.">
+				<Audit CreateUser="Administrator" CreateDate="28 APR 2022" CreateTime=" 8:21:51AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="28 APR 2022" ModifiedTime=" 8:21:51AM" ModifiedVersionNumber="1"/>
+			</Comment>
+		</Field>
+		<Field Guid="{0518003f-e483-4d6f-a764-190f06e275cf}" Name="date_update" Description="Date update." DataType="DATE" Size="4" ScreenPicture="@D010-B" ScreenPrompt="Date update:" ReportHeading="DateUp" Justification="LEFT" InitialValue="ryb_ServerDate()" FormTab="&apos;Internal&apos;" Message="Date update." Tooltip="Date update." ReportControl=" STRING(@D010-B),USE(gtDESCR:date_update),TRN,LEFT,FONT(&apos;Consolas&apos;,10)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;Date update:&apos;),USE(?gtDESCR:date_update:Prompt),TRN,FONT(&apos;Segoe UI&apos;,10)"/>
+				<Line Text=" ENTRY(@D010-B),USE(gtDESCR:date_update),TRN,LEFT,FONT(&apos;Segoe UI&apos;,10),MSG(&apos;Date update.&apos;),TIP(&apos;Date update.&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate="28 APR 2022" CreateTime=" 8:21:51AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="28 APR 2022" ModifiedTime=" 8:21:51AM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+			<Option Property="RASQL" PropertyType="1" PropertyValue=",,[DATE]"/>
+		</Field>
+		<Field Guid="{5bbe6f04-60c0-48de-80ad-914065134bd4}" Name="time_update" Description="Time update." DataType="TIME" Size="4" ScreenPicture="@T04B" ScreenPrompt="Time update:" ReportHeading="TimeUp" Justification="LEFT" InitialValue="ryb_ServerTime()" FormTab="&apos;Internal&apos;" Message="Time update." Tooltip="Time update." ReportControl=" STRING(@T04B),USE(gtDESCR:time_update),TRN,LEFT,FONT(&apos;Consolas&apos;,10)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;Time update:&apos;),USE(?gtDESCR:time_update:Prompt),TRN,FONT(&apos;Segoe UI&apos;,10)"/>
+				<Line Text=" ENTRY(@T04B),USE(gtDESCR:time_update),TRN,LEFT,FONT(&apos;Segoe UI&apos;,10),MSG(&apos;Time update.&apos;),TIP(&apos;Time update.&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate="28 APR 2022" CreateTime=" 8:21:51AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="28 APR 2022" ModifiedTime=" 8:21:51AM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+			<Option Property="RASQL" PropertyType="1" PropertyValue=",,[TIME]"/>
+		</Field>
+		<Field Guid="{2a59968c-98cc-4222-8f65-c260457fbc2e}" Name="user_update" Description="User update." DataType="STRING" Size="20" ScreenPicture="@s20" ScreenPrompt="User Update:" ReportHeading="UserUp" Justification="LEFT" InitialValue="ryb_UserName()" FormTab="&apos;Internal&apos;" Message="User update." Tooltip="User update." ReportControl=" STRING(@s20),USE(gtDESCR:user_update),LEFT">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;User Update:&apos;),USE(?gtDESCR:user_update:Prompt),TRN"/>
+				<Line Text=" ENTRY(@s20),USE(gtDESCR:user_update),LEFT,MSG(&apos;User update.&apos;),TIP(&apos;User update.&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate="28 APR 2022" CreateTime=" 8:21:51AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="28 APR 2022" ModifiedTime=" 8:21:51AM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+			<Option Property="RASQL" PropertyType="1" PropertyValue=",,[USER]"/>
+		</Field>
+		<Field Guid="{ab77b7be-26c3-4f64-afdb-765fad1ae56c}" Ident="3576" Name="active_flag" Description="Active flag." DataType="STRING" Size="1" ScreenPicture="@s1" ScreenPrompt="Active flag:" ReportHeading="A" Justification="CENTER" InitialValue="&apos;A&apos;" FormTab="&apos;Data&apos;" Message="Active flag." Tooltip="Active flag." ReportControl=" STRING(@s1),USE(gtDESCR:active_flag),TRN,CENTER,FONT(&apos;Consolas&apos;,10)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;Active flag:&apos;),USE(?gtDESCR:active_flag:Prompt)"/>
+				<Line Text=" COMBO(@s1),USE(gtDESCR:active_flag),CENTER,MSG(&apos;Active flag.&apos;),TIP(&apos;Active flag.&apos;),FROM(&apos;Active|#A|Inactive|#I|Deleted|#D|Purged|#P&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate="28 APR 2022" CreateTime=" 8:21:51AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="28 APR 2022" ModifiedTime=" 8:21:51AM" ModifiedVersionNumber="1"/>
+			<Validity Check="INLIST" Choices="Active|Inactive|Deleted|Purged" Values="A|I|D|P"/>
+		</Field>
+		<Field Guid="{11f7589d-fe08-43db-b24c-7a53b0947ff8}" Ident="1986" Name="guid" Description="Primary identifier." DataType="STRING" Size="16" ScreenPicture="@s16" ScreenPrompt="GUID:" ReportHeading="GUID" Justification="LEFT" ReadOnly="true" ExternalName="guid" InitialValue="ryb_MakeGUID()" FormTab="&apos;Internal&apos;" Message="Primary identifier." Tooltip="Primary identifier." ReportControl=" STRING(@s16),USE(gtDESCR:guid),LEFT,FONT(&apos;Consolas&apos;,10)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;GUID:&apos;),USE(?gtDESCR:guid:Prompt),TRN,FONT(&apos;Segoe UI&apos;,10)"/>
+				<Line Text=" ENTRY(@s16),USE(gtDESCR:guid),LEFT,FONT(&apos;Segoe UI&apos;,10),MSG(&apos;Primary identifier.&apos;),TIP(&apos;Primary identifier.&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate="28 APR 2022" CreateTime=" 8:21:51AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="28 APR 2022" ModifiedTime=" 8:21:51AM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+			<Comment Text="User id.">
+				<Audit CreateUser="Administrator" CreateDate="28 APR 2022" CreateTime=" 8:21:51AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="28 APR 2022" ModifiedTime=" 8:21:51AM" ModifiedVersionNumber="1"/>
+			</Comment>
+			<Option Property="GUID" PropertyType="3" PropertyValue="1"/>
+			<Option Property="RASQL" PropertyType="1" PropertyValue=",,[GUIDPKEY]"/>
+		</Field>
+		<Field Guid="{2be1cae4-89e8-4f37-8086-0e2aa7739fe6}" Name="p_order" Description="Presentation order." DataType="SHORT" Size="2" ScreenPicture="@n-4" ScreenPrompt="Order:" ReportHeading="Order" Justification="RIGHT" InitialValue="100" FormTab="&apos;Data&apos;" Message="Presentation order." Tooltip="Presentation order." ReportControl=" STRING(@n-4),USE(gtDESCR:p_order),RIGHT">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;Order:&apos;),USE(?gtDESCR:p_order:Prompt)"/>
+				<Line Text=" SPIN(@n-4),USE(gtDESCR:p_order),RIGHT,MSG(&apos;Presentation order.&apos;),TIP(&apos;Presentation order.&apos;),RANGE(1,100)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate="28 APR 2022" CreateTime=" 8:21:51AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="28 APR 2022" ModifiedTime=" 8:21:51AM" ModifiedVersionNumber="1"/>
+			<Validity Check="INRANGE" RangeLow="1" RangeHigh="100"/>
+		</Field>
+		<Field Guid="{c32e9bb7-f6b1-47d8-864d-f566b947cbcd}" Name="data_code" Description="Data code." DataType="STRING" Size="9" ScreenPicture="@s9" ScreenPrompt="Code:" ReportHeading="Code" Case="UPPER" Justification="LEFT" InitialValue="&apos;&apos;" FormTab="&apos;Data&apos;" Message="Data code." Tooltip="Data code." ReportControl=" STRING(@s9),USE(gtDESCR:data_code),LEFT">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;Code:&apos;),USE(?gtDESCR:data_code:Prompt)"/>
+				<Line Text=" ENTRY(@s9),USE(gtDESCR:data_code),LEFT,MSG(&apos;Data code.&apos;),TIP(&apos;Data code.&apos;),UPR"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate="28 APR 2022" CreateTime=" 8:21:51AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="28 APR 2022" ModifiedTime=" 8:21:51AM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+		</Field>
+		<Field Guid="{2f0944cc-9c6e-43ed-902e-726e687668ef}" Name="data_name" Description="Data name." DataType="STRING" Size="240" ScreenPicture="@s240" ScreenPrompt="Name:" ReportHeading="Name" Justification="LEFT" InitialValue="&apos;&apos;" FormTab="&apos;Data&apos;" Message="Data name." Tooltip="Data name." ReportControl=" STRING(@s240),USE(gtDESCR:data_name),LEFT">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;Name:&apos;),USE(?gtDESCR:data_name:Prompt)"/>
+				<Line Text=" ENTRY(@s240),USE(gtDESCR:data_name),LEFT,MSG(&apos;Data name.&apos;),TIP(&apos;Data name.&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate="28 APR 2022" CreateTime=" 8:21:51AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="28 APR 2022" ModifiedTime=" 8:21:51AM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+		</Field>
+		<Key Guid="{075a4ed9-e5ee-479b-a0ef-c44e252467eb}" Order="1" Name="timestampkey" ExternalName="key0_c102_ts" Description="Time stamp key." KeyType="KEY">
+			<Audit CreateUser="Administrator" CreateDate="28 APR 2022" CreateTime=" 8:21:51AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="28 APR 2022" ModifiedTime=" 8:21:51AM" ModifiedVersionNumber="1"/>
+			<Component Guid="{c0128980-ad0b-4a53-8341-f3d5608cc271}" FieldId="{744baf64-429c-4e99-984f-d77b2c05db2c}" Order="1" Ascend="true">
+				<Audit CreateUser="Administrator" CreateDate="28 APR 2022" CreateTime=" 8:21:51AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="28 APR 2022" ModifiedTime=" 8:21:51AM" ModifiedVersionNumber="1"/>
+			</Component>
+		</Key>
+		<Key Guid="{6d2b32cf-6c09-45c8-9d30-a3d1be8b2be2}" Order="2" Name="servertimestampkey" ExternalName="key0_c102_sts" Description="Server time stamp key." KeyType="KEY">
+			<Audit CreateUser="Administrator" CreateDate="28 APR 2022" CreateTime=" 8:21:51AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="28 APR 2022" ModifiedTime=" 8:21:51AM" ModifiedVersionNumber="1"/>
+			<Component Guid="{c9fce9b9-a4ec-40a0-83f4-39bd27e48c53}" FieldId="{fa1a3aa5-07e3-4f7f-b3e6-4d7de5da1273}" Order="1" Ascend="true">
+				<Audit CreateUser="Administrator" CreateDate="28 APR 2022" CreateTime=" 8:21:51AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="28 APR 2022" ModifiedTime=" 8:21:51AM" ModifiedVersionNumber="1"/>
+			</Component>
+		</Key>
+		<Key Guid="{bd620dc7-a4a4-4fe1-9790-efa686a4432e}" Order="3" Name="deletedtimestampkey" ExternalName="key0_c102_dts" Description="Deleted time stamp key." KeyType="KEY">
+			<Audit CreateUser="Administrator" CreateDate="28 APR 2022" CreateTime=" 8:21:51AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="28 APR 2022" ModifiedTime=" 8:21:51AM" ModifiedVersionNumber="1"/>
+			<Component Guid="{3ba89a21-5c71-4b3a-a85a-3b711d69e3e3}" FieldId="{3e08590c-2f0c-481f-be6f-dfcbc2e0bec9}" Order="1" Ascend="true">
+				<Audit CreateUser="Administrator" CreateDate="28 APR 2022" CreateTime=" 8:21:51AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="28 APR 2022" ModifiedTime=" 8:21:51AM" ModifiedVersionNumber="1"/>
+			</Component>
+		</Key>
+		<Key Guid="{57439ee7-5584-4136-a6d7-7e8dbef3ee5e}" Order="4" Name="key0_descr_pkey" ExternalName="key0_descr_pkey" Description="Primary identifier key." KeyType="KEY" Unique="true" Primary="true">
+			<Audit CreateUser="Administrator" CreateDate=" 9 OCT 2020" CreateTime=" 6:01:01PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="28 APR 2022" ModifiedTime=" 8:25:42AM" ModifiedVersionNumber="1"/>
+			<Component Guid="{bbd3eda4-e83e-4d0e-946d-cf495cc28e43}" FieldId="{11f7589d-fe08-43db-b24c-7a53b0947ff8}" Order="1" Ascend="true">
+				<Audit CreateUser="Administrator" CreateDate="28 APR 2022" CreateTime=" 8:21:51AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="28 APR 2022" ModifiedTime=" 8:21:51AM" ModifiedVersionNumber="1"/>
+			</Component>
+		</Key>
+		<Key Guid="{b5105f0e-b965-4e93-8191-911f6733c21d}" Order="5" Name="key1_descr_ukey" ExternalName="key1_descr_ukey" Description="Code, guid key." KeyType="KEY" Unique="true">
+			<Audit CreateUser="Administrator" CreateDate=" 3 APR 2022" CreateTime=" 2:24:42PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="28 APR 2022" ModifiedTime=" 8:25:58AM" ModifiedVersionNumber="1"/>
+			<Component Guid="{00f9c499-fbe0-47e2-a4c4-80b4229c4892}" FieldId="{c32e9bb7-f6b1-47d8-864d-f566b947cbcd}" Order="1" Ascend="true">
+				<Audit CreateUser="Administrator" CreateDate="28 APR 2022" CreateTime=" 8:21:51AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="28 APR 2022" ModifiedTime=" 8:21:51AM" ModifiedVersionNumber="1"/>
+			</Component>
+			<Component Guid="{e1303e85-355f-410e-91b3-6feb7cf2c615}" FieldId="{ab77b7be-26c3-4f64-afdb-765fad1ae56c}" Order="2" Ascend="true">
+				<Audit CreateUser="Administrator" CreateDate="28 APR 2022" CreateTime=" 8:21:51AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="28 APR 2022" ModifiedTime=" 8:21:51AM" ModifiedVersionNumber="1"/>
+			</Component>
+			<Component Guid="{732fee41-9c71-4ff8-aa91-2049469e7941}" FieldId="{11f7589d-fe08-43db-b24c-7a53b0947ff8}" Order="3" Ascend="true">
+				<Audit CreateUser="Administrator" CreateDate="28 APR 2022" CreateTime=" 8:21:51AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="28 APR 2022" ModifiedTime=" 8:21:51AM" ModifiedVersionNumber="1"/>
+			</Component>
+		</Key>
+		<Key Guid="{d8c4c29a-9ea6-4d5e-ba0e-2d66f1769367}" Order="6" Name="keya_descr_ukey" ExternalName="keya_descr_ukey" Description="Sort key." KeyType="KEY" Unique="true">
+			<Audit CreateUser="Administrator" CreateDate=" 3 APR 2022" CreateTime=" 2:24:42PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="28 APR 2022" ModifiedTime=" 8:26:32AM" ModifiedVersionNumber="1"/>
+			<Component Guid="{d6317e6e-6631-4fd5-aa32-3e54228257f6}" FieldId="{2be1cae4-89e8-4f37-8086-0e2aa7739fe6}" Order="1" Ascend="true">
+				<Audit CreateUser="Administrator" CreateDate="28 APR 2022" CreateTime=" 8:21:51AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="28 APR 2022" ModifiedTime=" 8:21:51AM" ModifiedVersionNumber="1"/>
+			</Component>
+			<Component Guid="{8a81c39c-32c8-42bb-a0bd-d14ee06941bf}" FieldId="{2f0944cc-9c6e-43ed-902e-726e687668ef}" Order="2" Ascend="true">
+				<Audit CreateUser="Administrator" CreateDate="28 APR 2022" CreateTime=" 8:21:51AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="28 APR 2022" ModifiedTime=" 8:21:51AM" ModifiedVersionNumber="1"/>
+			</Component>
+			<Component Guid="{55e71c31-5fd8-4104-aad5-8bc9748a850f}" FieldId="{11f7589d-fe08-43db-b24c-7a53b0947ff8}" Order="3" Ascend="true">
+				<Audit CreateUser="Administrator" CreateDate="28 APR 2022" CreateTime=" 8:21:51AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate="28 APR 2022" ModifiedTime=" 8:21:51AM" ModifiedVersionNumber="1"/>
+			</Component>
+		</Key>
+	</Table>
+	<Table Guid="{e0cb9d9c-b5cc-4091-a72c-8ea3a0a66afe}" Name="gtRefRec" Description="Reference Record Definitions" Prefix="gtRR00" Driver="TOPSPEED" Thread="true" Bindable="true">
+		<Audit CreateUser="Administrator" CreateDate=" 1 MAY 2022" CreateTime="10:06:58AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 2 MAY 2022" ModifiedTime="10:59:31AM" ModifiedVersionNumber="1"/>
+		<Field Guid="{28e40725-01f5-46fe-823c-5efeea341361}" Name="ReferenceAny" Description="Define ANY reference" DataType="ULONG" Size="4" ScreenPicture="@n13" ScreenPrompt="Reference Any:" ReportHeading="RefAny" Justification="RIGHT" Offset="1" Message="Define ANY reference" Tooltip="Define ANY reference" ReportControl=" STRING(@n13),USE(gtRR00:ReferenceAny),RIGHT(1)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;Reference Any:&apos;),USE(?gtRR00:ReferenceAny:Prompt)"/>
+				<Line Text=" ENTRY(@n13),USE(gtRR00:ReferenceAny),RIGHT(1),MSG(&apos;Define ANY reference&apos;),TIP(&apos;Define ANY reference&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate=" 1 MAY 2022" CreateTime=" 4:59:50PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 2 MAY 2022" ModifiedTime="10:59:31AM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+			<Option Property="REFVAR" PropertyType="1" PropertyValue=",ANY"/>
+		</Field>
+		<Field Guid="{326c643a-f6c6-4739-85bf-ab97a140cf90}" Name="ReferenceFile" Description="Define FILE reference" DataType="ULONG" Size="4" ScreenPicture="@n13" ScreenPrompt="Reference File:" ReportHeading="RefFile" Justification="LEFT" Message="Define FILE reference" Tooltip="Define FILE reference" ReportControl=" STRING(@n13),USE(gtRR00:ReferenceFile),LEFT">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;Reference File:&apos;),USE(?gtRR00:ReferenceFile:Prompt)"/>
+				<Line Text=" ENTRY(@n13),USE(gtRR00:ReferenceFile),LEFT,MSG(&apos;Define FILE reference&apos;),TIP(&apos;Define FILE reference&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate=" 1 MAY 2022" CreateTime=" 1:18:33PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 2 MAY 2022" ModifiedTime="10:59:31AM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+			<Option Property="REFVAR" PropertyType="1" PropertyValue=",&amp;FILE"/>
+		</Field>
+		<Field Guid="{6eef92a6-e37c-4079-b257-fe63efb1d76a}" Name="ReferenceRecord" Description="Define RECORD reference" DataType="ULONG" Size="4" ScreenPicture="@n13" ScreenPrompt="Reference Record:" ReportHeading="RefRecord" Justification="RIGHT" Offset="1" Message="Define RECORD reference" Tooltip="Define RECORD reference" ReportControl=" STRING(@n13),USE(gtRR00:ReferenceRecord),RIGHT(1)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;Reference Record:&apos;),USE(?gtRR00:ReferenceRecord:Prompt)"/>
+				<Line Text=" ENTRY(@n13),USE(gtRR00:ReferenceRecord),RIGHT(1),MSG(&apos;Define RECORD reference&apos;),TIP(&apos;Define RECORD reference&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate=" 1 MAY 2022" CreateTime=" 4:58:05PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 2 MAY 2022" ModifiedTime="10:59:31AM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+			<Option Property="REFVAR" PropertyType="1" PropertyValue=",&amp;RECORD"/>
+		</Field>
+		<Field Guid="{a421f9f3-6ab8-4d0e-9a81-e19c014bbbaa}" Name="ReferenceKey" Description="Define KEY reference" DataType="ULONG" Size="4" ScreenPicture="@n13" ScreenPrompt="Reference Key:" ReportHeading="RefKey" Justification="RIGHT" Offset="1" Message="Define KEY reference" Tooltip="Define KEY reference" ReportControl=" STRING(@n13),USE(gtRR00:ReferenceKey),RIGHT(1)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;Reference Key:&apos;),USE(?gtRR00:ReferenceKey:Prompt)"/>
+				<Line Text=" ENTRY(@n13),USE(gtRR00:ReferenceKey),RIGHT(1),MSG(&apos;Define KEY reference&apos;),TIP(&apos;Define KEY reference&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate=" 1 MAY 2022" CreateTime=" 4:58:59PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 2 MAY 2022" ModifiedTime="10:59:31AM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+			<Option Property="REFVAR" PropertyType="1" PropertyValue=",&amp;KEY"/>
+		</Field>
+		<Field Guid="{fd813dc9-75ea-4b9f-8c01-274d268d7b0b}" Name="ReferenceField" Description="Define FIELD reference" DataType="ULONG" Size="4" ScreenPicture="@n13" ScreenPrompt="Reference Field:" ReportHeading="RefField" Justification="RIGHT" Offset="1" Message="Define FIELD reference" Tooltip="Define FIELD reference" ReportControl=" STRING(@n13),USE(gtRR00:ReferenceField),RIGHT(1)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;Reference Field:&apos;),USE(?gtRR00:ReferenceField:Prompt)"/>
+				<Line Text=" ENTRY(@n13),USE(gtRR00:ReferenceField),RIGHT(1),MSG(&apos;Define FIELD reference&apos;),TIP(&apos;Define FIELD reference&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate=" 2 MAY 2022" CreateTime=" 8:19:05AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 2 MAY 2022" ModifiedTime="10:59:31AM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+			<Option Property="REFVAR" PropertyType="1" PropertyValue=",&amp;FIELD"/>
+		</Field>
+		<Field Guid="{852bd45c-8464-40b9-985a-e9da7e751398}" Name="ReferenceView" Description="Define VIEW reference" DataType="ULONG" Size="4" ScreenPicture="@n13" ScreenPrompt="Reference View:" ReportHeading="RefView" Justification="RIGHT" Offset="1" Message="Define VIEW reference" Tooltip="Define VIEW reference" ReportControl=" STRING(@n13),USE(gtRR00:ReferenceView),RIGHT(1)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;Reference View:&apos;),USE(?gtRR00:ReferenceView:Prompt)"/>
+				<Line Text=" ENTRY(@n13),USE(gtRR00:ReferenceView),RIGHT(1),MSG(&apos;Define VIEW reference&apos;),TIP(&apos;Define VIEW reference&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate=" 1 MAY 2022" CreateTime=" 5:03:43PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 2 MAY 2022" ModifiedTime="10:59:31AM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+			<Option Property="REFVAR" PropertyType="1" PropertyValue=",&amp;VIEW"/>
+		</Field>
+		<Field Guid="{5efc0a25-dcfe-48ba-8129-44b0713ea667}" Name="ReferenceWindow" Description="Define WINDOW reference" DataType="ULONG" Size="4" ScreenPicture="@n13" ScreenPrompt="Reference Window:" ReportHeading="RefWindow" Justification="RIGHT" Offset="1" Message="Define WINDOW reference" Tooltip="Define WINDOW reference" ReportControl=" STRING(@n13),USE(gtRR00:ReferenceWindow),RIGHT(1)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;Reference Window:&apos;),USE(?gtRR00:ReferenceWindow:Prompt)"/>
+				<Line Text=" ENTRY(@n13),USE(gtRR00:ReferenceWindow),RIGHT(1),MSG(&apos;Define WINDOW reference&apos;),TIP(&apos;Define WINDOW reference&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate=" 2 MAY 2022" CreateTime=" 8:03:45AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 2 MAY 2022" ModifiedTime="10:59:31AM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+			<Option Property="REFVAR" PropertyType="1" PropertyValue=",&amp;WINDOW"/>
+		</Field>
+		<Field Guid="{75e02c70-d304-4302-b2b5-6caf41ac04ee}" Name="ReferenceReport" Description="Define REPORT reference" DataType="ULONG" Size="4" ScreenPicture="@n13" ScreenPrompt="Reference Report:" ReportHeading="RefReport" Justification="RIGHT" Offset="1" Message="Define REPORT reference" Tooltip="Define REPORT reference" ReportControl=" STRING(@n13),USE(gtRR00:ReferenceReport),RIGHT(1)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;Reference Report:&apos;),USE(?gtRR00:ReferenceReport:Prompt)"/>
+				<Line Text=" ENTRY(@n13),USE(gtRR00:ReferenceReport),RIGHT(1),MSG(&apos;Define REPORT reference&apos;),TIP(&apos;Define REPORT reference&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate=" 2 MAY 2022" CreateTime=" 8:04:20AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 2 MAY 2022" ModifiedTime="10:59:31AM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+			<Option Property="REFVAR" PropertyType="1" PropertyValue=",&amp;REPORT"/>
+		</Field>
+		<Field Guid="{e135dd6e-857f-4f59-bafe-fea566fce562}" Name="ReferenceClass" Description="Define CLASS reference" DataType="ULONG" Size="4" ScreenPicture="@n13" ScreenPrompt="Reference Class:" ReportHeading="RefClass" Justification="RIGHT" Offset="1" Message="Define CLASS reference" Tooltip="Define CLASS reference" ReportControl=" STRING(@n13),USE(gtRR00:ReferenceClass),RIGHT(1)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;Reference Class:&apos;),USE(?gtRR00:ReferenceClass:Prompt)"/>
+				<Line Text=" ENTRY(@n13),USE(gtRR00:ReferenceClass),RIGHT(1),MSG(&apos;Define CLASS reference&apos;),TIP(&apos;Define CLASS reference&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate=" 2 MAY 2022" CreateTime=" 7:49:22AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 2 MAY 2022" ModifiedTime="10:59:31AM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+			<Option Property="REFVAR" PropertyType="1" PropertyValue=",&amp;CLASS"/>
+		</Field>
+		<Field Guid="{b6495bd0-24f6-4a33-b460-0d0ab157ae67}" Name="ReferenceGroup" Description="Define GROUP reference" DataType="ULONG" Size="4" ScreenPicture="@n13" ScreenPrompt="Reference Group:" ReportHeading="RefGroup" Justification="RIGHT" Offset="1" Message="Define GROUP reference" Tooltip="Define GROUP reference" ReportControl=" STRING(@n13),USE(gtRR00:ReferenceGroup),RIGHT(1)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;Reference Group:&apos;),USE(?gtRR00:ReferenceGroup:Prompt)"/>
+				<Line Text=" ENTRY(@n13),USE(gtRR00:ReferenceGroup),RIGHT(1),MSG(&apos;Define GROUP reference&apos;),TIP(&apos;Define GROUP reference&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate=" 2 MAY 2022" CreateTime=" 7:53:16AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 2 MAY 2022" ModifiedTime="10:59:31AM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+			<Option Property="REFVAR" PropertyType="1" PropertyValue=",&amp;GROUP"/>
+		</Field>
+		<Field Guid="{b2ea02c3-55f2-4920-bf84-0bd28d65e45b}" Name="ReferenceQueue" Description="Define QUEUE reference" DataType="ULONG" Size="4" ScreenPicture="@n13" ScreenPrompt="Reference Queue:" ReportHeading="RefQueue" Justification="RIGHT" Offset="1" Message="Define QUEUE reference" Tooltip="Define QUEUE reference" ReportControl=" STRING(@n13),USE(gtRR00:ReferenceQueue),RIGHT(1)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;Reference Queue:&apos;),USE(?gtRR00:ReferenceQueue:Prompt)"/>
+				<Line Text=" ENTRY(@n13),USE(gtRR00:ReferenceQueue),RIGHT(1),MSG(&apos;Define QUEUE reference&apos;),TIP(&apos;Define QUEUE reference&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate=" 2 MAY 2022" CreateTime=" 7:53:16AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 2 MAY 2022" ModifiedTime="10:59:31AM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+			<Option Property="REFVAR" PropertyType="1" PropertyValue=",&amp;QUEUE"/>
+		</Field>
+		<Field Guid="{39fa856c-0c81-4764-bb71-46636a2b05dc}" Name="ReferenceLike" Description="Define LIKE reference" DataType="ULONG" Size="4" ScreenPicture="@n13" ScreenPrompt="Reference Like:" ReportHeading="RefLike" Justification="RIGHT" Offset="1" Message="Define LIKE reference" Tooltip="Define LIKE reference" ReportControl=" STRING(@n13),USE(gtRR00:ReferenceLike),RIGHT(1)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;Reference Like:&apos;),USE(?gtRR00:ReferenceLike:Prompt)"/>
+				<Line Text=" ENTRY(@n13),USE(gtRR00:ReferenceLike),RIGHT(1),MSG(&apos;Define LIKE reference&apos;),TIP(&apos;Define LIKE reference&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate=" 2 MAY 2022" CreateTime=" 8:41:08AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 2 MAY 2022" ModifiedTime="10:59:31AM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+			<Option Property="REFVAR" PropertyType="1" PropertyValue=",&amp;LIKE"/>
+		</Field>
+		<Field Guid="{9c2bd9c6-154a-4b47-a4cf-327e2e078ed5}" Name="ReferencePicture" Description="Define PICTURE reference" DataType="ULONG" Size="4" ScreenPicture="@n13" ScreenPrompt="Reference Picture:" ReportHeading="RefPicture" Justification="RIGHT" Offset="1" Message="Define PICTURE reference" Tooltip="Define PICTURE reference" ReportControl=" STRING(@n13),USE(gtRR00:ReferencePicture),RIGHT(1)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;Reference Picture:&apos;),USE(?gtRR00:ReferencePicture:Prompt)"/>
+				<Line Text=" ENTRY(@n13),USE(gtRR00:ReferencePicture),RIGHT(1),MSG(&apos;Define PICTURE reference&apos;),TIP(&apos;Define PICTURE reference&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate=" 2 MAY 2022" CreateTime=" 8:42:02AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 2 MAY 2022" ModifiedTime="10:59:31AM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+			<Option Property="REFVAR" PropertyType="1" PropertyValue=",&amp;PICTURE"/>
+		</Field>
+		<Field Guid="{b58ff250-beac-42ae-b37e-d0717df9bc75}" Name="ReferenceType" Description="Define TYPE reference" DataType="ULONG" Size="4" ScreenPicture="@n13" ScreenPrompt="Reference Type:" ReportHeading="RefType" Justification="RIGHT" Offset="1" Message="Define TYPE reference" Tooltip="Define TYPE reference" ReportControl=" STRING(@n13),USE(gtRR00:ReferenceType),RIGHT(1)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;Reference Type:&apos;),USE(?gtRR00:ReferenceType:Prompt)"/>
+				<Line Text=" ENTRY(@n13),USE(gtRR00:ReferenceType),RIGHT(1),MSG(&apos;Define TYPE reference&apos;),TIP(&apos;Define TYPE reference&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate=" 2 MAY 2022" CreateTime=" 8:42:59AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 2 MAY 2022" ModifiedTime="10:59:31AM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+			<Option Property="REFVAR" PropertyType="1" PropertyValue=",&amp;TYPE"/>
+		</Field>
+		<Field Guid="{f4328003-d840-4b5e-bec7-d7dfc33fbf49}" Name="ReferenceName" Description="Define NAME reference" DataType="ULONG" Size="4" ScreenPicture="@n13" ScreenPrompt="Reference Name:" ReportHeading="RefName" Justification="RIGHT" Offset="1" Message="Define NAME reference" Tooltip="Define NAME reference" ReportControl=" STRING(@n13),USE(gtRR00:ReferenceName),RIGHT(1)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;Reference Name:&apos;),USE(?gtRR00:ReferenceName:Prompt)"/>
+				<Line Text=" ENTRY(@n13),USE(gtRR00:ReferenceName),RIGHT(1),MSG(&apos;Define NAME reference&apos;),TIP(&apos;Define NAME reference&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate=" 2 MAY 2022" CreateTime=" 8:45:46AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 2 MAY 2022" ModifiedTime="10:59:31AM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+			<Option Property="REFVAR" PropertyType="1" PropertyValue=",&amp;NAME"/>
+		</Field>
+		<Field Guid="{25a4fd5e-a109-4492-a040-5693decd1488}" Name="ReferenceMemo" Description="Define MEMO reference" DataType="ULONG" Size="4" ScreenPicture="@n13" ScreenPrompt="Reference Memo:" ReportHeading="RefMemo" Justification="RIGHT" Offset="1" Message="Define MEMO reference" Tooltip="Define MEMO reference" ReportControl=" STRING(@n13),USE(gtRR00:ReferenceMemo),RIGHT(1)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;Reference Memo:&apos;),USE(?gtRR00:ReferenceMemo:Prompt)"/>
+				<Line Text=" ENTRY(@n13),USE(gtRR00:ReferenceMemo),RIGHT(1),MSG(&apos;Define MEMO reference&apos;),TIP(&apos;Define MEMO reference&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate=" 2 MAY 2022" CreateTime=" 9:19:36AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 2 MAY 2022" ModifiedTime="10:59:31AM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+			<Option Property="REFVAR" PropertyType="1" PropertyValue=",&amp;MEMO"/>
+		</Field>
+		<Field Guid="{1b10ab02-626c-490f-ad58-73f9657fcf7b}" Name="ReferenceBlob" Description="Define BLOB reference" DataType="ULONG" Size="4" ScreenPicture="@n13" ScreenPrompt="Reference Blob:" ReportHeading="RefBlob" Justification="RIGHT" Offset="1" Message="Define BLOB reference" Tooltip="Define BLOB reference" ReportControl=" STRING(@n13),USE(gtRR00:ReferenceBlob),RIGHT(1)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;Reference Blob:&apos;),USE(?gtRR00:ReferenceBlob:Prompt)"/>
+				<Line Text=" ENTRY(@n13),USE(gtRR00:ReferenceBlob),RIGHT(1),MSG(&apos;Define BLOB reference&apos;),TIP(&apos;Define BLOB reference&apos;)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate=" 2 MAY 2022" CreateTime=" 9:20:16AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 2 MAY 2022" ModifiedTime="10:59:31AM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+			<Option Property="REFVAR" PropertyType="1" PropertyValue=",&amp;BLOB"/>
+		</Field>
+	</Table>
+	<Table Guid="{dce0da5a-2bf0-47dc-bf91-56734505d77b}" Usage="Global" Name="gRefRec" Description="Reference record group 01" Prefix="gRR01">
+		<Audit CreateUser="Administrator" CreateDate=" 1 MAY 2022" CreateTime="10:14:58AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 1 MAY 2022" ModifiedTime=" 1:27:26PM" ModifiedVersionNumber="1"/>
+		<Field Guid="{e813a8b3-b1b5-4c11-8168-46abe5334580}" Name="gRefGroup" DataType="GROUP" ScreenPicture="@s1" ScreenPrompt="g Ref Group:" ReportHeading="g Ref Group" ReportControl=" STRING(@s1),USE(gRR01:gRefGroup)">
+			<WindowControl>
+				<Line Text=" PROMPT(&apos;g Ref Group:&apos;),USE(?gRR01:gRefGroup:Prompt)"/>
+				<Line Text=" ENTRY(@s1),USE(gRR01:gRefGroup)"/>
+			</WindowControl>
+			<Audit CreateUser="Administrator" CreateDate=" 1 MAY 2022" CreateTime="10:22:30AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 1 MAY 2022" ModifiedTime=" 1:27:26PM" ModifiedVersionNumber="1"/>
+			<Validity Check="NOCHECKS"/>
+			<Field Guid="{525ac64c-18dc-4890-8049-0e41f43ae45c}" Name="CurrentFile" Description="Current FILE reference" DataType="FILE" Reference="true" ScreenPicture="@s20" ScreenPrompt="Current File:" ReportHeading="Current File" Message="Current FILE reference" Tooltip="Current FILE reference" ReportControl=" STRING(@s20),USE(CurrentFile)">
+				<WindowControl>
+					<Line Text=" PROMPT(&apos;Current File:&apos;),USE(?CurrentFile:Prompt)"/>
+					<Line Text=" ENTRY(@s20),USE(CurrentFile),MSG(&apos;Current FILE reference&apos;),TIP(&apos;Current FILE reference&apos;)"/>
+				</WindowControl>
+				<Audit CreateUser="Administrator" CreateDate=" 1 MAY 2022" CreateTime="10:15:36AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 1 MAY 2022" ModifiedTime="10:29:54AM" ModifiedVersionNumber="1"/>
+				<Validity Check="NOCHECKS"/>
+			</Field>
+			<Field Guid="{1ecf48fe-2713-40ba-ab77-c54c736bd8f7}" Name="CurrentBuffer" Description="Current RECORD reference" DataType="GROUP" Reference="true" ScreenPicture="@s1" ScreenPrompt="Current Buffer:" ReportHeading="Current Buffer" Message="Current RECORD reference" Tooltip="Current RECORD reference" ReportControl=" STRING(@s1),USE(CurrentBuffer)">
+				<WindowControl>
+					<Line Text=" PROMPT(&apos;Current Buffer:&apos;),USE(?CurrentBuffer:Prompt)"/>
+					<Line Text=" ENTRY(@s1),USE(CurrentBuffer),MSG(&apos;Current RECORD reference&apos;),TIP(&apos;Current RECORD reference&apos;)"/>
+				</WindowControl>
+				<Audit CreateUser="Administrator" CreateDate=" 1 MAY 2022" CreateTime="10:26:45AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 1 MAY 2022" ModifiedTime="10:32:32AM" ModifiedVersionNumber="1"/>
+				<Validity Check="NOCHECKS"/>
+			</Field>
+			<Field Guid="{0a1505ac-0b35-4a68-a905-7db28712bfb7}" Name="CurrentKey" Description="Current KEY reference" DataType="KEY" Reference="true" ScreenPicture="@s20" ScreenPrompt="Current Key:" ReportHeading="Current Key" Message="Current KEY reference" Tooltip="Current KEY reference" ReportControl=" STRING(@s20),USE(CurrentKey)">
+				<WindowControl>
+					<Line Text=" PROMPT(&apos;Current Key:&apos;),USE(?CurrentKey:Prompt)"/>
+					<Line Text=" ENTRY(@s20),USE(CurrentKey),MSG(&apos;Current KEY reference&apos;),TIP(&apos;Current KEY reference&apos;)"/>
+				</WindowControl>
+				<Audit CreateUser="Administrator" CreateDate=" 1 MAY 2022" CreateTime="10:30:52AM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 1 MAY 2022" ModifiedTime="10:34:04AM" ModifiedVersionNumber="1"/>
+				<Validity Check="NOCHECKS"/>
+			</Field>
+			<Field Guid="{ea2ef472-9121-4953-9068-96d78c27f5d4}" Name="CurrentField" Description="Current FIELD reference" DataType="ANY" Size="1" ScreenPicture="@s1" ScreenPrompt="Current Field:" ReportHeading="Current Field" Message="Current FIELD reference" Tooltip="Current FIELD reference" ReportControl=" STRING(@s1),USE(CurrentField)">
+				<WindowControl>
+					<Line Text=" PROMPT(&apos;Current Field:&apos;),USE(?CurrentField:Prompt)"/>
+					<Line Text=" ENTRY(@s1),USE(CurrentField),MSG(&apos;Current FIELD reference&apos;),TIP(&apos;Current FIELD reference&apos;)"/>
+				</WindowControl>
+				<Audit CreateUser="Administrator" CreateDate=" 1 MAY 2022" CreateTime=" 1:25:55PM" CreateVersionNumber="1" ModifiedUser="Administrator" ModifiedDate=" 1 MAY 2022" ModifiedTime=" 1:27:26PM" ModifiedVersionNumber="1"/>
+				<Validity Check="NOCHECKS"/>
+			</Field>
+		</Field>
+	</Table>
+</Dictionary>
+
