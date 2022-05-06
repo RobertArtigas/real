@@ -1,7 +1,8 @@
 !BOF
 !
+! Dictionary:   C:\_GIT_\RobertArtigas\real\Dictionary\rybabc.dct
 ! File:         C:\_GIT_\RobertArtigas\real\Include\grprec_gtNameAttr.inc
-! Date-Time:    2022/05/05 - 12:12:54PM
+! Date-Time:    2022/05/06 - 09:38:50AM
 ! Purpose:      Generated File Records as Groups
 ! Author:       GenerateGroups Template
 ! Narative:     This template is used to pass records structures
