@@ -1,8 +1,9 @@
   !BOF
   !
+  ! Dictionary:   C:\_GIT_\RobertArtigas\real\Dictionary\rybabc.dct
   ! File:         C:\_GIT_\RobertArtigas\real\Include\lbd_gtGlobal.inc
   ! Table:        gtGLO:gtGlobal
-  ! Date-Time:    2022/04/28 - 03:11:49PM
+  ! Date-Time:    2022/05/06 - 09:38:50AM
   ! Purpose:      Generated List box format for Clarion
   ! Author:       Create List Box Template
   ! Narative:     This template is used to create list box formats
