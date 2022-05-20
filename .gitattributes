@@ -50,6 +50,7 @@ help/* linguist-documentation
 *.tpw linguist-language=Clarion
 *.txa linguist-language=Clarion
 *.txd linguist-language=Clarion
+*.red linguist-language=Clarion
 .app.BinaryImport linguist-language=Clarion
 .dct.BinaryImport linguist-language=Clarion
 
