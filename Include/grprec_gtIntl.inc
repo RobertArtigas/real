@@ -1,8 +1,10 @@
 !BOF
 !
+!Region Generate
+!
 ! Dictionary:   C:\_GIT_\RobertArtigas\real\Dictionary\rybabc.dct
-! File:         C:\_GIT_\RobertArtigas\real\Include\grprec_gtGlobal.inc
-! Date-Time:    2022/05/19 - 07:44:06PM
+! File:         C:\_GIT_\RobertArtigas\real\Include\grprec_gtIntl.inc
+! Date-Time:    2022/05/21 - 07:40:53AM
 ! Purpose:      Generated File Records as Groups
 ! Author:       GenerateGroups Template
 ! Narative:     This template is used to pass records structures
@@ -10,16 +12,17 @@
 !               are not shared. Since file definitions are not
 !               available, data has to be passed in areas.
 !
+!EndRegion
 !Region Header
-! Name:         gtGlobal
-! Prefix:       gtGLO
-! Description:  Global Definitions
+! Name:         gtIntl
+! Prefix:       gtINTL
+! Description:  International Definitions
 !EndRegion
 !Region RecordDefinition
 !
 !-Record-
 !
-GTGLO_tRec                                GROUP,TYPE,BINDABLE,PRE(rGTGLO)
+GTINTL_tRec                               GROUP,TYPE,BINDABLE,PRE(rGTINTL)
 defIntl                                     GROUP,NAME('defIntl|GROUP|@S1|[0000-0000]|PR(''def Intl:'')|CO(''def Intl'')')                                                         ! [0000-0000] 
 intl_code_def                                 GROUP,NAME('intl_code_def|GROUP|@S20|[0000-0000]|PR(''intl code def:'')|CO(''intl code def'')')                                      ! [0000-0000] 
 ic_led                                          STRING(9),NAME('ic_led|STRING(9)|@S9|[0001-0009]|PR(''Default Language:'')|CO(''LED'')')                                           ! [0001-0009] Language default.
@@ -84,73 +87,73 @@ a_guid                                        STRING(16),DIM(14),OVER(area_guid_
 !
 !-Queue-
 !
-GTGLO_qRec                                QUEUE(GTGLO_tRec),TYPE,BINDABLE,PRE(qGTGLO)
+GTINTL_qRec                               QUEUE(GTINTL_tRec),TYPE,BINDABLE,PRE(qGTINTL)
                                           END
 !EndRegion
 !Region FieldEquates
 !
 !-Equates-
 !
-C_GTGLO_IC_LED                              EQUATE(1)
-C_GTGLO_IC_LE                               EQUATE(2)
-C_GTGLO_IC_CU                               EQUATE(3)
-C_GTGLO_IC_CR                               EQUATE(4)
-C_GTGLO_IC_TZ                               EQUATE(5)
-C_GTGLO_IC_MC                               EQUATE(6)
-C_GTGLO_IC_MD                               EQUATE(7)
-C_GTGLO_IC_MU                               EQUATE(8)
-C_GTGLO_I_CODE                              EQUATE(9)
-C_GTGLO_IG_LED                              EQUATE(10)
-C_GTGLO_IG_LE                               EQUATE(11)
-C_GTGLO_IG_CU                               EQUATE(12)
-C_GTGLO_IG_CR                               EQUATE(13)
-C_GTGLO_IG_TZ                               EQUATE(14)
-C_GTGLO_IG_MC                               EQUATE(15)
-C_GTGLO_IG_MD                               EQUATE(16)
-C_GTGLO_IG_MU                               EQUATE(17)
-C_GTGLO_I_GUID                              EQUATE(18)
-C_GTGLO_AC_GA                               EQUATE(19)
-C_GTGLO_AC_GB                               EQUATE(20)
-C_GTGLO_AC_GC                               EQUATE(21)
-C_GTGLO_AC_GD                               EQUATE(22)
-C_GTGLO_AC_GE                               EQUATE(23)
-C_GTGLO_AC_G1                               EQUATE(24)
-C_GTGLO_AC_G2                               EQUATE(25)
-C_GTGLO_AC_G3                               EQUATE(26)
-C_GTGLO_AC_G4                               EQUATE(27)
-C_GTGLO_AC_G5                               EQUATE(28)
-C_GTGLO_AC_G6                               EQUATE(29)
-C_GTGLO_AC_G7                               EQUATE(30)
-C_GTGLO_AC_G8                               EQUATE(31)
-C_GTGLO_AC_G9                               EQUATE(32)
-C_GTGLO_A_CODE                              EQUATE(33)
-C_GTGLO_AG_GA                               EQUATE(34)
-C_GTGLO_AG_GB                               EQUATE(35)
-C_GTGLO_AG_GC                               EQUATE(36)
-C_GTGLO_AG_GD                               EQUATE(37)
-C_GTGLO_AG_GE                               EQUATE(38)
-C_GTGLO_AG_G1                               EQUATE(39)
-C_GTGLO_AG_G2                               EQUATE(40)
-C_GTGLO_AG_G3                               EQUATE(41)
-C_GTGLO_AG_G4                               EQUATE(42)
-C_GTGLO_AG_G5                               EQUATE(43)
-C_GTGLO_AG_G6                               EQUATE(44)
-C_GTGLO_AG_G7                               EQUATE(45)
-C_GTGLO_AG_G8                               EQUATE(46)
-C_GTGLO_AG_G9                               EQUATE(47)
-C_GTGLO_A_GUID                              EQUATE(48)
+C_GTINTL_IC_LED                             EQUATE(1)
+C_GTINTL_IC_LE                              EQUATE(2)
+C_GTINTL_IC_CU                              EQUATE(3)
+C_GTINTL_IC_CR                              EQUATE(4)
+C_GTINTL_IC_TZ                              EQUATE(5)
+C_GTINTL_IC_MC                              EQUATE(6)
+C_GTINTL_IC_MD                              EQUATE(7)
+C_GTINTL_IC_MU                              EQUATE(8)
+C_GTINTL_I_CODE                             EQUATE(9)
+C_GTINTL_IG_LED                             EQUATE(10)
+C_GTINTL_IG_LE                              EQUATE(11)
+C_GTINTL_IG_CU                              EQUATE(12)
+C_GTINTL_IG_CR                              EQUATE(13)
+C_GTINTL_IG_TZ                              EQUATE(14)
+C_GTINTL_IG_MC                              EQUATE(15)
+C_GTINTL_IG_MD                              EQUATE(16)
+C_GTINTL_IG_MU                              EQUATE(17)
+C_GTINTL_I_GUID                             EQUATE(18)
+C_GTINTL_AC_GA                              EQUATE(19)
+C_GTINTL_AC_GB                              EQUATE(20)
+C_GTINTL_AC_GC                              EQUATE(21)
+C_GTINTL_AC_GD                              EQUATE(22)
+C_GTINTL_AC_GE                              EQUATE(23)
+C_GTINTL_AC_G1                              EQUATE(24)
+C_GTINTL_AC_G2                              EQUATE(25)
+C_GTINTL_AC_G3                              EQUATE(26)
+C_GTINTL_AC_G4                              EQUATE(27)
+C_GTINTL_AC_G5                              EQUATE(28)
+C_GTINTL_AC_G6                              EQUATE(29)
+C_GTINTL_AC_G7                              EQUATE(30)
+C_GTINTL_AC_G8                              EQUATE(31)
+C_GTINTL_AC_G9                              EQUATE(32)
+C_GTINTL_A_CODE                             EQUATE(33)
+C_GTINTL_AG_GA                              EQUATE(34)
+C_GTINTL_AG_GB                              EQUATE(35)
+C_GTINTL_AG_GC                              EQUATE(36)
+C_GTINTL_AG_GD                              EQUATE(37)
+C_GTINTL_AG_GE                              EQUATE(38)
+C_GTINTL_AG_G1                              EQUATE(39)
+C_GTINTL_AG_G2                              EQUATE(40)
+C_GTINTL_AG_G3                              EQUATE(41)
+C_GTINTL_AG_G4                              EQUATE(42)
+C_GTINTL_AG_G5                              EQUATE(43)
+C_GTINTL_AG_G6                              EQUATE(44)
+C_GTINTL_AG_G7                              EQUATE(45)
+C_GTINTL_AG_G8                              EQUATE(46)
+C_GTINTL_AG_G9                              EQUATE(47)
+C_GTINTL_A_GUID                             EQUATE(48)
 !
 !EndRegion
 !Region Class_YES
 !-------------------------------------------------------------------------------------------------!
-! Control:      ?gtGLO_ListQ                                                                      !
-! Object Name:  gtGLO_oListClass                                                                  !
+! Control:      ?gtINTL_ListQ                                                                     !
+! Object Name:  gtINTL_oListClass                                                                 !
 ! Queue List:   ListQ                                                                             !
 !-------------------------------------------------------------------------------------------------!
 ! This LIST structure is created to replace the one generated by the ABC templates.               !
 ! Save your generated window structure first, then cut and paste replacing your LIST structure.   !
 !-------------------------------------------------------------------------------------------------!
-! LIST,AT(4,40,400,40),USE(?gtGLO_ListQ),HVSCROLL, |
+! LIST,AT(4,40,400,40),USE(?gtINTL_ListQ),HVSCROLL, |
 !   FORMAT('' & |
 !   '36L(0)|M~ST~@s9@#19#' & |
 !   '36L(0)|M~PT~@s9@#20#' & |
@@ -201,66 +204,66 @@ C_GTGLO_A_GUID                              EQUATE(48)
 !   '64L(0)|M~MD~@s16@#16#' & |
 !   '64L(0)|M~MU~@s16@#17#' & |
 !   ''), |
-!   FROM(gtGLO_oListClass.ListQ), |
-!   #FIELDS(gtGLO_oListClass.ListQ.ac_ga, |
-!   gtGLO_oListClass.ListQ.ac_gb, |
-!   gtGLO_oListClass.ListQ.ac_gc, |
-!   gtGLO_oListClass.ListQ.ac_gd, |
-!   gtGLO_oListClass.ListQ.ac_ge, |
-!   gtGLO_oListClass.ListQ.ac_g1, |
-!   gtGLO_oListClass.ListQ.ac_g2, |
-!   gtGLO_oListClass.ListQ.ac_g3, |
-!   gtGLO_oListClass.ListQ.ac_g4, |
-!   gtGLO_oListClass.ListQ.ac_g5, |
-!   gtGLO_oListClass.ListQ.ac_g6, |
-!   gtGLO_oListClass.ListQ.ac_g7, |
-!   gtGLO_oListClass.ListQ.ac_g8, |
-!   gtGLO_oListClass.ListQ.ac_g9, |
-!   gtGLO_oListClass.ListQ.ag_ga, |
-!   gtGLO_oListClass.ListQ.ag_gb, |
-!   gtGLO_oListClass.ListQ.ag_gc, |
-!   gtGLO_oListClass.ListQ.ag_gd, |
-!   gtGLO_oListClass.ListQ.ag_ge, |
-!   gtGLO_oListClass.ListQ.ag_g1, |
-!   gtGLO_oListClass.ListQ.ag_g2, |
-!   gtGLO_oListClass.ListQ.ag_g3, |
-!   gtGLO_oListClass.ListQ.ag_g4, |
-!   gtGLO_oListClass.ListQ.ag_g5, |
-!   gtGLO_oListClass.ListQ.ag_g6, |
-!   gtGLO_oListClass.ListQ.ag_g7, |
-!   gtGLO_oListClass.ListQ.ag_g8, |
-!   gtGLO_oListClass.ListQ.ag_g9, |
-!   gtGLO_oListClass.ListQ.i_code, |
-!   gtGLO_oListClass.ListQ.i_guid, |
-!   gtGLO_oListClass.ListQ.a_code, |
-!   gtGLO_oListClass.ListQ.a_guid, |
-!   gtGLO_oListClass.ListQ.ic_led, |
-!   gtGLO_oListClass.ListQ.ic_le, |
-!   gtGLO_oListClass.ListQ.ic_cu, |
-!   gtGLO_oListClass.ListQ.ic_cr, |
-!   gtGLO_oListClass.ListQ.ic_tz, |
-!   gtGLO_oListClass.ListQ.ic_mc, |
-!   gtGLO_oListClass.ListQ.ic_md, |
-!   gtGLO_oListClass.ListQ.ic_mu, |
-!   gtGLO_oListClass.ListQ.ig_led, |
-!   gtGLO_oListClass.ListQ.ig_le, |
-!   gtGLO_oListClass.ListQ.ig_cu, |
-!   gtGLO_oListClass.ListQ.ig_cr, |
-!   gtGLO_oListClass.ListQ.ig_tz, |
-!   gtGLO_oListClass.ListQ.ig_mc, |
-!   gtGLO_oListClass.ListQ.ig_md, |
-!   gtGLO_oListClass.ListQ.ig_mu)
+!   FROM(gtINTL_oListClass.ListQ), |
+!   #FIELDS(gtINTL_oListClass.ListQ.ac_ga, |
+!   gtINTL_oListClass.ListQ.ac_gb, |
+!   gtINTL_oListClass.ListQ.ac_gc, |
+!   gtINTL_oListClass.ListQ.ac_gd, |
+!   gtINTL_oListClass.ListQ.ac_ge, |
+!   gtINTL_oListClass.ListQ.ac_g1, |
+!   gtINTL_oListClass.ListQ.ac_g2, |
+!   gtINTL_oListClass.ListQ.ac_g3, |
+!   gtINTL_oListClass.ListQ.ac_g4, |
+!   gtINTL_oListClass.ListQ.ac_g5, |
+!   gtINTL_oListClass.ListQ.ac_g6, |
+!   gtINTL_oListClass.ListQ.ac_g7, |
+!   gtINTL_oListClass.ListQ.ac_g8, |
+!   gtINTL_oListClass.ListQ.ac_g9, |
+!   gtINTL_oListClass.ListQ.ag_ga, |
+!   gtINTL_oListClass.ListQ.ag_gb, |
+!   gtINTL_oListClass.ListQ.ag_gc, |
+!   gtINTL_oListClass.ListQ.ag_gd, |
+!   gtINTL_oListClass.ListQ.ag_ge, |
+!   gtINTL_oListClass.ListQ.ag_g1, |
+!   gtINTL_oListClass.ListQ.ag_g2, |
+!   gtINTL_oListClass.ListQ.ag_g3, |
+!   gtINTL_oListClass.ListQ.ag_g4, |
+!   gtINTL_oListClass.ListQ.ag_g5, |
+!   gtINTL_oListClass.ListQ.ag_g6, |
+!   gtINTL_oListClass.ListQ.ag_g7, |
+!   gtINTL_oListClass.ListQ.ag_g8, |
+!   gtINTL_oListClass.ListQ.ag_g9, |
+!   gtINTL_oListClass.ListQ.i_code, |
+!   gtINTL_oListClass.ListQ.i_guid, |
+!   gtINTL_oListClass.ListQ.a_code, |
+!   gtINTL_oListClass.ListQ.a_guid, |
+!   gtINTL_oListClass.ListQ.ic_led, |
+!   gtINTL_oListClass.ListQ.ic_le, |
+!   gtINTL_oListClass.ListQ.ic_cu, |
+!   gtINTL_oListClass.ListQ.ic_cr, |
+!   gtINTL_oListClass.ListQ.ic_tz, |
+!   gtINTL_oListClass.ListQ.ic_mc, |
+!   gtINTL_oListClass.ListQ.ic_md, |
+!   gtINTL_oListClass.ListQ.ic_mu, |
+!   gtINTL_oListClass.ListQ.ig_led, |
+!   gtINTL_oListClass.ListQ.ig_le, |
+!   gtINTL_oListClass.ListQ.ig_cu, |
+!   gtINTL_oListClass.ListQ.ig_cr, |
+!   gtINTL_oListClass.ListQ.ig_tz, |
+!   gtINTL_oListClass.ListQ.ig_mc, |
+!   gtINTL_oListClass.ListQ.ig_md, |
+!   gtINTL_oListClass.ListQ.ig_mu)
 !
 !EndRegion
 !Region Class_NO
 !-------------------------------------------------------------------------------------------------!
-! Control:      ?gtGLO_ListQ                                                                      !
+! Control:      ?gtINTL_ListQ                                                                     !
 ! Queue List:   ListQ                                                                             !
 !-------------------------------------------------------------------------------------------------!
 ! This LIST structure is created to replace the one generated by the ABC templates.               !
 ! Save your generated window structure first, then cut and paste replacing your LIST structure.   !
 !-------------------------------------------------------------------------------------------------!
-! LIST,AT(4,40,400,40),USE(?gtGLO_ListQ),HVSCROLL, |
+! LIST,AT(4,40,400,40),USE(?gtINTL_ListQ),HVSCROLL, |
 !   FORMAT('' & |
 !   '36L(0)|M~ST~@s9@#19#' & |
 !   '36L(0)|M~PT~@s9@#20#' & |

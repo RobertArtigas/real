@@ -3,7 +3,7 @@
   ! Dictionary:   C:\_GIT_\RobertArtigas\real\Dictionary\rybabc.dct
   ! File:         C:\_GIT_\RobertArtigas\real\Include\lbd_gtDescr.inc
   ! Table:        gtDESCR:gtDescr
-  ! Date-Time:    2022/05/19 - 07:44:06PM
+  ! Date-Time:    2022/05/21 - 07:28:30AM
   ! Purpose:      Generated List box format for Clarion
   ! Author:       Create List Box Template
   ! Narative:     This template is used to create list box formats

@@ -1,8 +1,10 @@
 !BOF
 !
+!Region Generate
+!
 ! Dictionary:   C:\_GIT_\RobertArtigas\real\Dictionary\rybabc.dct
 ! File:         C:\_GIT_\RobertArtigas\real\Include\grprec_gtBase.inc
-! Date-Time:    2022/05/19 - 07:44:06PM
+! Date-Time:    2022/05/21 - 07:40:53AM
 ! Purpose:      Generated File Records as Groups
 ! Author:       GenerateGroups Template
 ! Narative:     This template is used to pass records structures
@@ -10,6 +12,7 @@
 !               are not shared. Since file definitions are not
 !               available, data has to be passed in areas.
 !
+!EndRegion
 !Region Header
 ! Name:         gtBase
 ! Prefix:       gtBASE
