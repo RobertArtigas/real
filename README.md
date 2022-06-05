@@ -9,7 +9,7 @@ These pieces use a mumber of the repositories freely available from the author a
 You will need to install templates, work on directory structures, might even need to purchase some sowftware from some Clarion vendors. 
 Use what you feel confortable with, and please ask questions. You might even want to contribute something back. 
 Reach out if you feel like doing something. 
-There is plenty do do, and by contributing examples and doing webinars explaining the reasons for your decisions, we will all learn something.
+There is plenty do do, and by contributing examples, and by doing webinars explaining the reasons for your decisions, we will all learn something.
 
 You can even create something on your own reposityory. There is always room for new ways to apply known concepts. 
 **And code is the greatest arbitrator of operational systems reality.** 
