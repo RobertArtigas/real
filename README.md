@@ -1,7 +1,10 @@
-# real
+## real - Clarion based framework
 
-Clarion based framework
+This repository is a collection of pieces that can be used to put Clarion systems together. Not push button solutions, and from my somewhat limited perspective seem like useful pieces of code techniques that can be used accross different langauges in different forms. You will have to do some thinking about how you architech systems, how easy-to-use software from the users perpective flows, and how mantain, update, and backup systems.
 
+These pieces use a mumber of the repositories freely available from the author and other sources. You will need to install templates, work on directory structures, might even need to purchase some sowftware from some Clarion vendors. Use what you feel confortable with and ask questions. You might even want to contribute something back. Reach out if you feel like doing something. There is plenty do do, and by contributing examples and doing webinars explaining the reasons for your decisions, we will all learn something.
+
+You can even create something on your own reposityory. There is always room for new ways to apply known concepts. **And code is the greatest arbitrator of operational systems reality.** If you create your own repository, I will look forward to the examination of your techniques.
 
 ##
 ###
