@@ -16,7 +16,7 @@ You can even create something on your own reposityory. There is always room for 
 It either works for your needs in some form, or it does not work for your needs and you move on.
 If you create your own repository, I will look forward to the examination of your techniques.
 
-Got to the **[Wiki](https://github.com/RobertArtigas/real/wiki)** if you need some explanation. As pieces get created, documentation should follow.
+Got to the **[WIKI](https://github.com/RobertArtigas/real/wiki)** if you need some explanation. As pieces get created, documentation should follow.
 
 ##
 ###
