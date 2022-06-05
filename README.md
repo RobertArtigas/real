@@ -19,3 +19,19 @@ _Jedvaita: The Way the World Unfolds_
 [Wiki](https://github.com/RobertArtigas/real/wiki) 
 [Main](https://github.com/RobertArtigas) 
 [Repositories](https://github.com/RobertArtigas?tab=repositories)
+
+##
+
+“In matters of conscience, the law of the majority has no place.”<br/>
+_- Mahatma Gandhi_
+
+“The object of life is not to be on the side of the majority, but to escape finding oneself in the ranks of the insane.”<br/>
+_- Marcus Aurelius_
+
+“A good conscience fears no witness, but a guilty conscience is solicitous even in solitude. If we do nothing but what is honest, let all the world know it. But if otherwise, what does it signify to have nobody else know it, so long as I know it myself? Miserable is he who slights that witness”<br/>
+_- Seneca_
+
+“There comes a time when one must take a position that is neither safe, nor politic, nor popular, but he must take it because conscience tells him it is right.”<br/>
+_- Martin Luther King_
+
+##
