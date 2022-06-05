@@ -9,13 +9,13 @@
 ############
 ## Clarion
 ############
-*.app
+##*.app
 *.ap~
 *.bpp
 *.bct
 *.cache
 **/Cla*.dll
-*.dct
+##*.dct
 *.exe
 *.FileList.xml
 *.ini
