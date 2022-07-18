@@ -4,7 +4,7 @@
 !
 ! Dictionary:   C:\_GIT_\RobertArtigas\real\Dictionary\rybennaad.dct
 ! File:         C:\_GIT_\RobertArtigas\real\Include\table_entity.inc
-! Date-Time:    2022/06/29 - 01:18:53PM
+! Date-Time:    2022/07/14 - 09:12:44AM
 ! Purpose:      Generated File Records as Groups
 ! Author:       GenerateGroups Template
 ! Narative:     This template is used to pass records structures
@@ -80,10 +80,11 @@ time_update                                 TIME,NAME('time_update|TIME|@T04B|[0
 user_update                                 STRING(20),NAME('user_update|STRING(20)|@S20|[0037-0056]|PR(''User Update:'')|CO(''UserUp'')')                                         ! [0037-0056] User update.
 active_flag                                 STRING(1),NAME('active_flag|STRING(1)|@S1|[0057-0057]|PR(''Active flag:'')|CO(''A'')')                                                 ! [0057-0057] Active flag.
 guid                                        STRING(16),NAME('guid|STRING(16)|@S16|[0058-0073]|PR(''GUID:'')|CO(''GUID'')|Salt')                                                    ! [0058-0073] Primary identifier.
-hash_name                                   STRING(128),NAME('hash_name|STRING(128)|@S128|[0074-0201]|PR(''hash name:'')|CO(''hash name'')')                                       ! [0074-0201] Name hash.
-p_order                                     SHORT,NAME('p_order|SHORT|@N-4|[0202-0203]|PR(''Order:'')|CO(''Order'')')                                                              ! [0202-0203] Presentation order.
-data_code                                   STRING(9),NAME('data_code|STRING(9)|@S9|[0204-0212]|PR(''Code:'')|CO(''Code'')')                                                       ! [0204-0212] Data code.
-data_name                                   STRING(240),NAME('data_name|STRING(240)|@S240|[0213-0452]|PR(''Name:'')|CO(''Name'')|Hash(HASH_NAME)|Encrypted(MYTABLE)')              ! [0213-0452] Data name.
+guid_parent                                 STRING(16),NAME('guid_parent|STRING(16)|@S16|[0074-0089]|PR(''GUID Parent:'')|CO(''GUIDP'')')                                          ! [0074-0089] Primary parent identifier.
+hash_name                                   STRING(128),NAME('hash_name|STRING(128)|@S128|[0090-0217]|PR(''Hash Name:'')|CO(''HashName'')')                                        ! [0090-0217] Name hash.
+p_order                                     SHORT,NAME('p_order|SHORT|@N-4|[0218-0219]|PR(''Order:'')|CO(''Order'')')                                                              ! [0218-0219] Presentation order.
+data_code                                   STRING(9),NAME('data_code|STRING(9)|@S9|[0220-0228]|PR(''Code:'')|CO(''Code'')')                                                       ! [0220-0228] Data code.
+data_name                                   STRING(240),NAME('data_name|STRING(240)|@S240|[0229-0468]|PR(''Name:'')|CO(''Name'')|Hash(HASH_NAME)|Encrypted(MYTABLE)')              ! [0229-0468] Data name.
                                           END
 !EndRegion
 !Region QueueDefinition
@@ -106,10 +107,11 @@ C_E301_TIME_UPDATE                          EQUATE(6)
 C_E301_USER_UPDATE                          EQUATE(7)
 C_E301_ACTIVE_FLAG                          EQUATE(8)
 C_E301_GUID                                 EQUATE(9)
-C_E301_HASH_NAME                            EQUATE(10)
-C_E301_P_ORDER                              EQUATE(11)
-C_E301_DATA_CODE                            EQUATE(12)
-C_E301_DATA_NAME                            EQUATE(13)
+C_E301_GUID_PARENT                          EQUATE(10)
+C_E301_HASH_NAME                            EQUATE(11)
+C_E301_P_ORDER                              EQUATE(12)
+C_E301_DATA_CODE                            EQUATE(13)
+C_E301_DATA_NAME                            EQUATE(14)
 !
 !EndRegion
 !Region Class_YES
@@ -124,9 +126,9 @@ C_E301_DATA_NAME                            EQUATE(13)
 ! LIST,AT(4,40,400,40),USE(?E301_ListQ),HVSCROLL, |
 !   FORMAT('' & |
 !   '10C(0)|M~A~@s1@#8#' & |
-!   '28R(0)|M~Order~@n-4@#11#' & |
-!   '36L(0)|M~Code~@s9@#12#' & |
-!   '120L(0)|M~Name~@s240@#13#' & |
+!   '28R(0)|M~Order~@n-4@#12#' & |
+!   '36L(0)|M~Code~@s9@#13#' & |
+!   '120L(0)|M~Name~@s240@#14#' & |
 !   '60L(0)|M~TS~@n15.0B@#1#' & |
 !   '60L(0)|M~STS~@n15.0B@#2#' & |
 !   '60L(0)|M~DTS~@n15.0B@#3#' & |
@@ -135,7 +137,8 @@ C_E301_DATA_NAME                            EQUATE(13)
 !   '44L(0)|M~TimeUp~@T04B@#6#' & |
 !   '80L(0)|M~UserUp~@s20@#7#' & |
 !   '88L(0)|M~GUID~@s16@#9#' & |
-!   '120L(0)|M~hash name~@s128@#10#' & |
+!   '88L(0)|M~GUIDP~@s16@#10#' & |
+!   '120L(0)|M~HashName~@s128@#11#' & |
 !   ''), |
 !   FROM(E301_oListClass.ListQ), |
 !   #FIELDS(E301_oListClass.ListQ.active_flag, |
@@ -150,6 +153,7 @@ C_E301_DATA_NAME                            EQUATE(13)
 !   E301_oListClass.ListQ.time_update, |
 !   E301_oListClass.ListQ.user_update, |
 !   E301_oListClass.ListQ.guid, |
+!   E301_oListClass.ListQ.guid_parent, |
 !   E301_oListClass.ListQ.hash_name)
 !
 !EndRegion
@@ -164,9 +168,9 @@ C_E301_DATA_NAME                            EQUATE(13)
 ! LIST,AT(4,40,400,40),USE(?E301_ListQ),HVSCROLL, |
 !   FORMAT('' & |
 !   '10C(0)|M~A~@s1@#8#' & |
-!   '28R(0)|M~Order~@n-4@#11#' & |
-!   '36L(0)|M~Code~@s9@#12#' & |
-!   '120L(0)|M~Name~@s240@#13#' & |
+!   '28R(0)|M~Order~@n-4@#12#' & |
+!   '36L(0)|M~Code~@s9@#13#' & |
+!   '120L(0)|M~Name~@s240@#14#' & |
 !   '60L(0)|M~TS~@n15.0B@#1#' & |
 !   '60L(0)|M~STS~@n15.0B@#2#' & |
 !   '60L(0)|M~DTS~@n15.0B@#3#' & |
@@ -175,7 +179,8 @@ C_E301_DATA_NAME                            EQUATE(13)
 !   '44L(0)|M~TimeUp~@T04B@#6#' & |
 !   '80L(0)|M~UserUp~@s20@#7#' & |
 !   '88L(0)|M~GUID~@s16@#9#' & |
-!   '120L(0)|M~hash name~@s128@#10#' & |
+!   '88L(0)|M~GUIDP~@s16@#10#' & |
+!   '120L(0)|M~HashName~@s128@#11#' & |
 !   ''), |
 !   FROM(ListQ), |
 !   #FIELDS(ListQ.active_flag, |
@@ -190,6 +195,7 @@ C_E301_DATA_NAME                            EQUATE(13)
 !   ListQ.time_update, |
 !   ListQ.user_update, |
 !   ListQ.guid, |
+!   ListQ.guid_parent, |
 !   ListQ.hash_name)
 !
 !EndRegion

@@ -4,7 +4,7 @@
 !
 ! Dictionary:   C:\_GIT_\RobertArtigas\real\Dictionary\rybabc.dct
 ! File:         C:\_GIT_\RobertArtigas\real\Include\grprec_gtNameAttr.inc
-! Date-Time:    2022/05/21 - 07:40:53AM
+! Date-Time:    2022/07/14 - 10:44:54AM
 ! Purpose:      Generated File Records as Groups
 ! Author:       GenerateGroups Template
 ! Narative:     This template is used to pass records structures
@@ -15,128 +15,140 @@
 !EndRegion
 !Region Header
 ! Name:         gtNameAttr
-! Prefix:       gtNA00
+! Prefix:       gtNAMEATTR
 ! Description:  Name Attributes
 !EndRegion
 !Region RecordDefinition
 !
 !-Record-
 !
-GTNA00_tRec                               GROUP,TYPE,BINDABLE,PRE(rGTNA00)
+GTNAMEATTR_tRec                           GROUP,TYPE,BINDABLE,PRE(rGTNAMEATTR)
 FieldNumber                                 SHORT,NAME('FieldNumber|SHORT|@N4B|[0001-0002]|PR(''Field Number:'')|CO(''Number'')')                                                  ! [0001-0002] Field number.
 FieldSalt                                   BYTE,NAME('FieldSalt|BYTE|@N1B|[0003-0003]|PR(''Field Salt:'')|CO(''Salt'')')                                                          ! [0003-0003] Is a SALT encryption?
-FieldFrom                                   LONG,NAME('FieldFrom|LONG|@N04|[0004-0007]|PR(''Field From:'')|CO(''From'')')                                                          ! [0004-0007] Field starting location.
-FieldTo                                     LONG,NAME('FieldTo|LONG|@N04|[0008-0011]|PR(''Field To:'')|CO(''To'')')                                                                ! [0008-0011] Field ending location.
-FieldName                                   CSTRING(49),NAME('FieldName|CSTRING(49)|@S48|[0012-0060]|PR(''Field Name:'')|CO(''Name'')')                                            ! [0012-0060] Field name.
-FieldWhom                                   CSTRING(49),NAME('FieldWhom|CSTRING(49)|@S48|[0061-0109]|PR(''Field Whom:'')|CO(''Whom'')')                                            ! [0061-0109] Field whom it is.
-FieldType                                   CSTRING(49),NAME('FieldType|CSTRING(49)|@S48|[0110-0158]|PR(''Field Type:'')|CO(''Type'')')                                            ! [0110-0158] Field type clarion.
-FieldFormat                                 CSTRING(49),NAME('FieldFormat|CSTRING(49)|@S48|[0159-0207]|PR(''Field Format:'')|CO(''Format'')')                                      ! [0159-0207] Field format clarion.
-FieldRange                                  CSTRING(49),NAME('FieldRange|CSTRING(49)|@S48|[0208-0256]|PR(''Field Range:'')|CO(''Range'')')                                         ! [0208-0256] Field range location.
-FieldPrompt                                 CSTRING(129),NAME('FieldPrompt|CSTRING(129)|@S128|[0257-0385]|PR(''Field Prompt:'')|CO(''Prompt'')')                                   ! [0257-0385] Field prompt literal.
-FieldColumn                                 CSTRING(129),NAME('FieldColumn|CSTRING(129)|@S128|[0386-0514]|PR(''Field Column:'')|CO(''Column'')')                                   ! [0386-0514] Field column literal.
-FieldTypeSQL                                CSTRING(129),NAME('FieldTypeSQL|CSTRING(129)|@S128|[0515-0643]|PR(''SQL Type:'')|CO(''SQLType'')')                                     ! [0515-0643] Field type SQL.
-FieldFormatSQL                              CSTRING(129),NAME('FieldFormatSQL|CSTRING(129)|@S128|[0644-0772]|PR(''SQL Format:'')|CO(''SQLFormat'')')                               ! [0644-0772] Field format SQL.
-FieldTemp                                   CSTRING(241),NAME('FieldTemp|CSTRING(241)|@S240|[0773-1013]|PR(''Field Temp:'')|CO(''Temp'')')                                         ! [0773-1013] Field attributes temporary.
+FieldHash                                   BYTE,NAME('FieldHash|BYTE|@N1B|[0004-0004]|PR(''Field Hash'')|CO(''Hash'')')                                                           ! [0004-0004] Is a HASH encryption?
+FieldEncrypt                                BYTE,NAME('FieldEncrypt|BYTE|@N1B|[0005-0005]|PR(''Field Encrypt'')|CO(''Encrypt'')')                                                  ! [0005-0005] Is a FIELD encryption?
+FieldFrom                                   LONG,NAME('FieldFrom|LONG|@N04|[0006-0009]|PR(''Field From:'')|CO(''From'')')                                                          ! [0006-0009] Field starting location.
+FieldTo                                     LONG,NAME('FieldTo|LONG|@N04|[0010-0013]|PR(''Field To:'')|CO(''To'')')                                                                ! [0010-0013] Field ending location.
+FieldName                                   CSTRING(49),NAME('FieldName|CSTRING(49)|@S48|[0014-0062]|PR(''Field Name:'')|CO(''Name'')')                                            ! [0014-0062] Field name.
+FieldWhom                                   CSTRING(49),NAME('FieldWhom|CSTRING(49)|@S48|[0063-0111]|PR(''Field Whom:'')|CO(''Whom'')')                                            ! [0063-0111] Field whom it is.
+FieldType                                   CSTRING(49),NAME('FieldType|CSTRING(49)|@S48|[0112-0160]|PR(''Field Type:'')|CO(''Type'')')                                            ! [0112-0160] Field type clarion.
+FieldFormat                                 CSTRING(49),NAME('FieldFormat|CSTRING(49)|@S48|[0161-0209]|PR(''Field Format:'')|CO(''Format'')')                                      ! [0161-0209] Field format clarion.
+FieldRange                                  CSTRING(49),NAME('FieldRange|CSTRING(49)|@S48|[0210-0258]|PR(''Field Range:'')|CO(''Range'')')                                         ! [0210-0258] Field range location.
+FieldPrompt                                 CSTRING(129),NAME('FieldPrompt|CSTRING(129)|@S128|[0259-0387]|PR(''Field Prompt:'')|CO(''Prompt'')')                                   ! [0259-0387] Field prompt literal.
+FieldColumn                                 CSTRING(129),NAME('FieldColumn|CSTRING(129)|@S128|[0388-0516]|PR(''Field Column:'')|CO(''Column'')')                                   ! [0388-0516] Field column literal.
+FieldTypeSQL                                CSTRING(129),NAME('FieldTypeSQL|CSTRING(129)|@S128|[0517-0645]|PR(''SQL Type:'')|CO(''SQLType'')')                                     ! [0517-0645] Field type SQL.
+FieldFormatSQL                              CSTRING(129),NAME('FieldFormatSQL|CSTRING(129)|@S128|[0646-0774]|PR(''SQL Format:'')|CO(''SQLFormat'')')                               ! [0646-0774] Field format SQL.
+FieldTemp                                   CSTRING(241),NAME('FieldTemp|CSTRING(241)|@S240|[0775-1015]|PR(''Field Temp:'')|CO(''Temp'')')                                         ! [0775-1015] Field attributes temporary.
                                           END
 !EndRegion
 !Region QueueDefinition
 !
 !-Queue-
 !
-GTNA00_qRec                               QUEUE(GTNA00_tRec),TYPE,BINDABLE,PRE(qGTNA00)
+GTNAMEATTR_qRec                           QUEUE(GTNAMEATTR_tRec),TYPE,BINDABLE,PRE(qGTNAMEATTR)
                                           END
 !EndRegion
 !Region FieldEquates
 !
 !-Equates-
 !
-C_GTNA00_FIELDNUMBER                        EQUATE(1)
-C_GTNA00_FIELDSALT                          EQUATE(2)
-C_GTNA00_FIELDFROM                          EQUATE(3)
-C_GTNA00_FIELDTO                            EQUATE(4)
-C_GTNA00_FIELDNAME                          EQUATE(5)
-C_GTNA00_FIELDWHOM                          EQUATE(6)
-C_GTNA00_FIELDTYPE                          EQUATE(7)
-C_GTNA00_FIELDFORMAT                        EQUATE(8)
-C_GTNA00_FIELDRANGE                         EQUATE(9)
-C_GTNA00_FIELDPROMPT                        EQUATE(10)
-C_GTNA00_FIELDCOLUMN                        EQUATE(11)
-C_GTNA00_FIELDTYPESQL                       EQUATE(12)
-C_GTNA00_FIELDFORMATSQL                     EQUATE(13)
-C_GTNA00_FIELDTEMP                          EQUATE(14)
+C_GTNAMEATTR_FIELDNUMBER                    EQUATE(1)
+C_GTNAMEATTR_FIELDSALT                      EQUATE(2)
+C_GTNAMEATTR_FIELDHASH                      EQUATE(3)
+C_GTNAMEATTR_FIELDENCRYPT                   EQUATE(4)
+C_GTNAMEATTR_FIELDFROM                      EQUATE(5)
+C_GTNAMEATTR_FIELDTO                        EQUATE(6)
+C_GTNAMEATTR_FIELDNAME                      EQUATE(7)
+C_GTNAMEATTR_FIELDWHOM                      EQUATE(8)
+C_GTNAMEATTR_FIELDTYPE                      EQUATE(9)
+C_GTNAMEATTR_FIELDFORMAT                    EQUATE(10)
+C_GTNAMEATTR_FIELDRANGE                     EQUATE(11)
+C_GTNAMEATTR_FIELDPROMPT                    EQUATE(12)
+C_GTNAMEATTR_FIELDCOLUMN                    EQUATE(13)
+C_GTNAMEATTR_FIELDTYPESQL                   EQUATE(14)
+C_GTNAMEATTR_FIELDFORMATSQL                 EQUATE(15)
+C_GTNAMEATTR_FIELDTEMP                      EQUATE(16)
 !
 !EndRegion
 !Region Class_YES
 !-------------------------------------------------------------------------------------------------!
-! Control:      ?gtNA00_ListQ                                                                     !
-! Object Name:  gtNA00_oListClass                                                                 !
+! Control:      ?gtNAMEATTR_ListQ                                                                 !
+! Object Name:  gtNAMEATTR_oListClass                                                             !
 ! Queue List:   ListQ                                                                             !
 !-------------------------------------------------------------------------------------------------!
 ! This LIST structure is created to replace the one generated by the ABC templates.               !
 ! Save your generated window structure first, then cut and paste replacing your LIST structure.   !
 !-------------------------------------------------------------------------------------------------!
-! LIST,AT(4,40,400,40),USE(?gtNA00_ListQ),HVSCROLL, |
+! LIST,AT(4,40,400,40),USE(?gtNAMEATTR_ListQ),HVSCROLL, |
 !   FORMAT('' & |
-!   '32R(1)|M~Number~@n4B@#1#' & |
-!   '24R(0)|M~Salt~@n1B@#2#' & |
-!   '16L(0)|M~From~@n04@#3#' & |
-!   '16L(0)|M~To~@n04@#4#' & |
-!   '120L(0)|M~Name~@s48@#5#' & |
-!   '120L(0)|M~Whom~@s48@#6#' & |
-!   '120L(0)|M~Type~@s48@#7#' & |
-!   '120L(0)|M~Format~@s48@#8#' & |
-!   '120L(0)|M~Range~@s48@#9#' & |
-!   '120L(0)|M~Prompt~@s128@#10#' & |
-!   '120L(0)|M~Column~@s128@#11#' & |
-!   '120L(0)|M~SQLType~@s128@#12#' & |
-!   '120L(0)|M~SQLFormat~@s128@#13#' & |
-!   '120L(0)|M~Temp~@s240@#14#' & |
+!   '32L(2)|M~Number~@n4B@#1#' & |
+!   '24L(2)|M~Salt~@n1B@#2#' & |
+!   '24L(2)|M~Hash~@n1B@#3#' & |
+!   '36L(2)|M~Encrypt~@n1B@#4#' & |
+!   '16L(2)|M~From~@n04@#5#' & |
+!   '16L(2)|M~To~@n04@#6#' & |
+!   '120L(2)|M~Name~@s48@#7#' & |
+!   '120L(2)|M~Whom~@s48@#8#' & |
+!   '120L(2)|M~Type~@s48@#9#' & |
+!   '120L(2)|M~Format~@s48@#10#' & |
+!   '120L(2)|M~Range~@s48@#11#' & |
+!   '120L(2)|M~Prompt~@s128@#12#' & |
+!   '120L(2)|M~Column~@s128@#13#' & |
+!   '120L(2)|M~SQLType~@s128@#14#' & |
+!   '120L(2)|M~SQLFormat~@s128@#15#' & |
+!   '120L(2)|M~Temp~@s240@#16#' & |
 !   ''), |
-!   FROM(gtNA00_oListClass.ListQ), |
-!   #FIELDS(gtNA00_oListClass.ListQ.FieldNumber, |
-!   gtNA00_oListClass.ListQ.FieldSalt, |
-!   gtNA00_oListClass.ListQ.FieldFrom, |
-!   gtNA00_oListClass.ListQ.FieldTo, |
-!   gtNA00_oListClass.ListQ.FieldName, |
-!   gtNA00_oListClass.ListQ.FieldWhom, |
-!   gtNA00_oListClass.ListQ.FieldType, |
-!   gtNA00_oListClass.ListQ.FieldFormat, |
-!   gtNA00_oListClass.ListQ.FieldRange, |
-!   gtNA00_oListClass.ListQ.FieldPrompt, |
-!   gtNA00_oListClass.ListQ.FieldColumn, |
-!   gtNA00_oListClass.ListQ.FieldTypeSQL, |
-!   gtNA00_oListClass.ListQ.FieldFormatSQL, |
-!   gtNA00_oListClass.ListQ.FieldTemp)
+!   FROM(gtNAMEATTR_oListClass.ListQ), |
+!   #FIELDS(gtNAMEATTR_oListClass.ListQ.FieldNumber, |
+!   gtNAMEATTR_oListClass.ListQ.FieldSalt, |
+!   gtNAMEATTR_oListClass.ListQ.FieldHash, |
+!   gtNAMEATTR_oListClass.ListQ.FieldEncrypt, |
+!   gtNAMEATTR_oListClass.ListQ.FieldFrom, |
+!   gtNAMEATTR_oListClass.ListQ.FieldTo, |
+!   gtNAMEATTR_oListClass.ListQ.FieldName, |
+!   gtNAMEATTR_oListClass.ListQ.FieldWhom, |
+!   gtNAMEATTR_oListClass.ListQ.FieldType, |
+!   gtNAMEATTR_oListClass.ListQ.FieldFormat, |
+!   gtNAMEATTR_oListClass.ListQ.FieldRange, |
+!   gtNAMEATTR_oListClass.ListQ.FieldPrompt, |
+!   gtNAMEATTR_oListClass.ListQ.FieldColumn, |
+!   gtNAMEATTR_oListClass.ListQ.FieldTypeSQL, |
+!   gtNAMEATTR_oListClass.ListQ.FieldFormatSQL, |
+!   gtNAMEATTR_oListClass.ListQ.FieldTemp)
 !
 !EndRegion
 !Region Class_NO
 !-------------------------------------------------------------------------------------------------!
-! Control:      ?gtNA00_ListQ                                                                     !
+! Control:      ?gtNAMEATTR_ListQ                                                                 !
 ! Queue List:   ListQ                                                                             !
 !-------------------------------------------------------------------------------------------------!
 ! This LIST structure is created to replace the one generated by the ABC templates.               !
 ! Save your generated window structure first, then cut and paste replacing your LIST structure.   !
 !-------------------------------------------------------------------------------------------------!
-! LIST,AT(4,40,400,40),USE(?gtNA00_ListQ),HVSCROLL, |
+! LIST,AT(4,40,400,40),USE(?gtNAMEATTR_ListQ),HVSCROLL, |
 !   FORMAT('' & |
-!   '32R(1)|M~Number~@n4B@#1#' & |
-!   '24R(0)|M~Salt~@n1B@#2#' & |
-!   '16L(0)|M~From~@n04@#3#' & |
-!   '16L(0)|M~To~@n04@#4#' & |
-!   '120L(0)|M~Name~@s48@#5#' & |
-!   '120L(0)|M~Whom~@s48@#6#' & |
-!   '120L(0)|M~Type~@s48@#7#' & |
-!   '120L(0)|M~Format~@s48@#8#' & |
-!   '120L(0)|M~Range~@s48@#9#' & |
-!   '120L(0)|M~Prompt~@s128@#10#' & |
-!   '120L(0)|M~Column~@s128@#11#' & |
-!   '120L(0)|M~SQLType~@s128@#12#' & |
-!   '120L(0)|M~SQLFormat~@s128@#13#' & |
-!   '120L(0)|M~Temp~@s240@#14#' & |
+!   '32L(2)|M~Number~@n4B@#1#' & |
+!   '24L(2)|M~Salt~@n1B@#2#' & |
+!   '24L(2)|M~Hash~@n1B@#3#' & |
+!   '36L(2)|M~Encrypt~@n1B@#4#' & |
+!   '16L(2)|M~From~@n04@#5#' & |
+!   '16L(2)|M~To~@n04@#6#' & |
+!   '120L(2)|M~Name~@s48@#7#' & |
+!   '120L(2)|M~Whom~@s48@#8#' & |
+!   '120L(2)|M~Type~@s48@#9#' & |
+!   '120L(2)|M~Format~@s48@#10#' & |
+!   '120L(2)|M~Range~@s48@#11#' & |
+!   '120L(2)|M~Prompt~@s128@#12#' & |
+!   '120L(2)|M~Column~@s128@#13#' & |
+!   '120L(2)|M~SQLType~@s128@#14#' & |
+!   '120L(2)|M~SQLFormat~@s128@#15#' & |
+!   '120L(2)|M~Temp~@s240@#16#' & |
 !   ''), |
 !   FROM(ListQ), |
 !   #FIELDS(ListQ.FieldNumber, |
 !   ListQ.FieldSalt, |
+!   ListQ.FieldHash, |
+!   ListQ.FieldEncrypt, |
 !   ListQ.FieldFrom, |
 !   ListQ.FieldTo, |
 !   ListQ.FieldName, |
