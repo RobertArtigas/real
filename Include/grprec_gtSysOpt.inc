@@ -4,7 +4,7 @@
 !
 ! Dictionary:   C:\_GIT_\RobertArtigas\real\Dictionary\rybabc.dct
 ! File:         C:\_GIT_\RobertArtigas\real\Include\grprec_gtSysOpt.inc
-! Date-Time:    2022/07/14 - 10:44:54AM
+! Date-Time:    2023/04/08 - 10:43:28AM
 ! Purpose:      Generated File Records as Groups
 ! Author:       GenerateGroups Template
 ! Narative:     This template is used to pass records structures
@@ -23,9 +23,9 @@
 !-Record-
 !
 GTSYSOPT_tRec                             GROUP,TYPE,BINDABLE,PRE(rGTSYSOPT)
-LoginLocal                                  BYTE,NAME('LoginLocal|BYTE|@N1B|[0001-0001]|PR(''Login Local'')|CO(''LL'')')                                                           ! [0001-0001] System is local login.
-TestLocal                                   BYTE,NAME('TestLocal|BYTE|@N1B|[0002-0002]|PR(''Test Local'')|CO(''TL'')')                                                             ! [0002-0002] System is local test.
-TestAuto                                    BYTE,NAME('TestAuto|BYTE|@N1B|[0003-0003]|PR(''Test Auto'')|CO(''TA'')')                                                               ! [0003-0003] Allow automatic testing.
+LoginLocal                                  BYTE,NAME('LoginLocal|BYTE|@N1B|[0001-0001]|PR(''Login Local'')|CO(''LL'')|BOOLEAN|ATTRIBUTE')                                         ! [0001-0001] System is local login.
+TestLocal                                   BYTE,NAME('TestLocal|BYTE|@N1B|[0002-0002]|PR(''Test Local'')|CO(''TL'')|BOOLEAN|ATTRIBUTE')                                           ! [0002-0002] System is local test.
+TestAuto                                    BYTE,NAME('TestAuto|BYTE|@N1B|[0003-0003]|PR(''Test Auto'')|CO(''TA'')|BOOLEAN|ATTRIBUTE')                                             ! [0003-0003] Allow automatic testing.
                                           END
 !EndRegion
 !Region QueueDefinition
